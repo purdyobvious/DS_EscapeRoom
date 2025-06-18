@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shapes training</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a
+      tabindex="1"
+      accesskey="W"
+      href="#moveForward"
+      class="moveForward"
+      id="moveForward"
+    ></a>
+    <a
+      tabindex="2"
+      accesskey="A"
+      class="turnLeft"
+      id="turnLeft"
+      href="#turnLeft"
+    ></a>
+    <a tabindex="5" accesskey="X" class="stop" id="stop" href="#stop"></a>
+    <a
+      tabindex="3"
+      accesskey="D"
+      class="turnRight"
+      id="turnRight"
+      href="#turnRight"
+    ></a>
+    <a
+      tabindex="4"
+      accesskey="S"
+      class="moveBack"
+      id="moveBack"
+      href="#moveBack"
+    ></a>
+
+    <div class="scene">
+      <div class="frontWall"></div>
+      <div class="leftWall"></div>
+      <div class="rightWall"></div>
+      <div class="floor"></div>
+      <div class="ceiling"></div>
+      <div class="backWall"></div>
+    </div>
+
+    <div id="controls">
+      <div class="flex-grid">
+        <div class="col"></div>
+        <div class="col"><a href="#moveForward">&uarr;</a></div>
+        <div class="col"></div>
+      </div>
+      <div class="flex-grid">
+        <div class="col"><a href="#turnLeft">&larr;</a></div>
+        <div class="col"><a href="#stop">&bull;</a></div>
+        <div class="col"><a href="#turnRight">&rarr;</a></div>
+      </div>
+      <div class="flex-grid">
+        <div class="col"></div>
+        <div class="col"><a href="#moveBack">&darr;</a></div>
+        <div class="col"></div>
+      </div>
+    </div>
+  </body>
+</html>
