@@ -1,108 +1,111 @@
 :root {
-    --turnSpeed: 40s;
-    --speed: 300s;
+  --turnSpeed: 40s;
+  --speed: 300s;
 }
 
 @keyframes sceneRotateLeft {
-    to { transform: rotateY(-360deg);
-    }
+  to {
+    transform: rotateY(-360deg);
+  }
 }
 
 @keyframes sceneRotateRight {
-    to { transform: rotateY(360deg);
-    }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 @keyframes sceneMoveForward {
-    to { transform: translateZ(1000em);
-    }
+  to {
+    transform: translateZ(1000em);
+  }
 }
 
 @keyframes sceneMoveBack {
-        to { transform: translateZ(-1000em);
-        }
+  to {
+    transform: translateZ(-1000em);
+  }
 }
 
-
 body {
-    background-color: #000;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    perspective: 10em;
-    perspective-origin: 50% calc(50% - 2em);
-    overflow: hidden;
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  perspective: 10em;
+  perspective-origin: 50% calc(50% - 2em);
+  overflow: hidden;
 }
 
 .scene {
-    position: relative;
-    transform-style: preserve-3d;
-    z-index: 1;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 1;
 }
 
-.frontWall, .leftWall, .rightWall, .ceiling, .backWall {
-    position:absolute;
-    background-color: #f5eded;
-    width: 20em;
-    height: 20em;
-    top: -16em;
-    left: -10em;
-    transform: translateZ(-10em);
-    z-index: 1;
-    outline: 2px solid #000;
+.frontWall,
+.leftWall,
+.rightWall,
+.ceiling,
+.backWall {
+  position: absolute;
+  background-color: #f5eded;
+  width: 20em;
+  height: 20em;
+  top: -16em;
+  left: -10em;
+  transform: translateZ(-10em);
+  z-index: 1;
+  outline: 2px solid #000;
 }
 
 .leftWall {
-    left: -20em;
-    transform: rotateY(-90deg);
-    background-color: rgb(70, 54, 21);
+  left: -20em;
+  transform: rotateY(-90deg);
+  background-color: rgb(70, 54, 21);
 }
 
 .rightWall {
-    transform: rotateY(90deg);
-    left: 0;
-    background-color: #fff;
-    background-color: rgb(70, 54, 21);
+  transform: rotateY(90deg);
+  left: 0;
+  background-color: #fff;
+  background-color: rgb(70, 54, 21);
 }
 
 .floor {
-    background-color: #000;
-    background-image:  linear-gradient(135deg, #ffffff 25%, transparent 25%), linear-gradient(225deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%, #000 25%);
-    background-position:  1em 0, 1em 0, 0 0, 0 0;
-    background-size: 1em 1em;
-    background-repeat: repeat;
-    width: 20em;
-    height: 20em;
-    top: 1em;
-    z-index: 0;
-    position: absolute;
-    transform:
-        translate(-50%, -50%)
-        rotateX(90deg)
-        translateZ(-3em);
-        
-    z-index: 1;
+  background-color: #000;
+  background-image: linear-gradient(135deg, #ffffff 25%, transparent 25%),
+    linear-gradient(225deg, #ffffff 25%, transparent 25%),
+    linear-gradient(45deg, #ffffff 25%, transparent 25%),
+    linear-gradient(315deg, #ffffff 25%, #000 25%);
+  background-position: 1em 0, 1em 0, 0 0, 0 0;
+  background-size: 1em 1em;
+  background-repeat: repeat;
+  width: 20em;
+  height: 20em;
+  top: 1em;
+  z-index: 0;
+  position: absolute;
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
+  transform-style: preserve-3d;
+  z-index: 1;
 }
-
-
 
 .ceiling {
-    background-color: #a19292;
-    /* background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #222297 17px ), repeating-linear-gradient( #03076055, #030760 ); */
-    top:0;
-    left:0;
-    transform:
-        translate(-50%, -55%)
-        rotateX(90deg)
-        translateZ(15em);
-    z-index: 1;
+  background-color: #a19292;
+  /* background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #222297 17px ), repeating-linear-gradient( #03076055, #030760 ); */
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -55%) rotateX(90deg) translateZ(15em);
+  z-index: 1;
 }
 
-
-.frontWall, .backWall {
-    clip-path: polygon(0% 0%,
+.frontWall,
+.backWall {
+  clip-path: polygon(
+    0% 0%,
     0% 100%,
     33% 100%,
     33% 39%,
@@ -111,161 +114,410 @@ body {
     33% 100%,
     33% 100%,
     100% 100%,
-    100% 0%);
-    z-index: 1;
+    100% 0%
+  );
+  z-index: 1;
 }
 
 .frontWall {
-    background-color: rgb(70, 54, 21);
-    transform: translateZ(-10em);
+  background-color: rgb(70, 54, 21);
+  transform: translateZ(-10em);
 }
 
 .backWall {
-    background-color: rgb(70, 54, 21);
-    transform: translate3d(-25rem, 0rem, 25rem);
-    left: 0;
-    z-index: 1;
+  background-color: rgb(70, 54, 21);
+  transform: translate3d(-25rem, 0rem, 25rem);
+  left: 0;
+  z-index: 1;
 }
 
 .scene {
-    animation:
-    sceneRotateLeft var(--turnSpeed) infinite linear,
+  animation: sceneRotateLeft var(--turnSpeed) infinite linear,
     sceneRotateRight var(--turnSpeed) infinite linear,
     sceneMoveForward var(--speed) infinite linear,
     sceneMoveBack var(--speed) infinite linear;
-    animation-play-state: paused, paused, paused, paused;
+  animation-play-state: paused, paused, paused, paused;
 }
 
-:target.turnLeft ~ .scene, #turnLeft:focus ~ .scene {
-    animation-play-state: running, paused, paused, paused;
+:target.turnLeft ~ .scene,
+#turnLeft:focus ~ .scene {
+  animation-play-state: running, paused, paused, paused;
 }
 
-:target.turnRight ~ .scene, #turnRight:focus ~ .scene {
-animation-play-state: paused, running, paused, paused;
+:target.turnRight ~ .scene,
+#turnRight:focus ~ .scene {
+  animation-play-state: paused, running, paused, paused;
 }
 
-:target.moveBack ~ .scene, #moveBack:focus ~ .scene {
-animation-play-state: paused, paused, paused, running;
+:target.moveBack ~ .scene,
+#moveBack:focus ~ .scene {
+  animation-play-state: paused, paused, paused, running;
 }
 
-:target.moveForward ~ .scene, #moveForward:focus ~ .scene {
-animation-play-state: paused, paused, running, paused;
+:target.moveForward ~ .scene,
+#moveForward:focus ~ .scene {
+  animation-play-state: paused, paused, running, paused;
 }
 
-#moveForward, #turnLeft, #stop, #turnRight, #moveBack {
-    position: absolute;
-    left: -5000px;
-    top:-5000px;
+#moveForward,
+#turnLeft,
+#stop,
+#turnRight,
+#moveBack {
+  position: absolute;
+  left: -5000px;
+  top: -5000px;
 }
 
 .flex-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
 }
 
 .col {
-    width: 32%;
-    text-align: center;
-    z-index: 99;
+  width: 32%;
+  text-align: center;
+  z-index: 99;
 }
 
-#controls a:link, #controls a:visited {
-    text-decoration: none;
-    color:rgb(197, 22, 22);
-    text-shadow: 2px 2px #000;
-    z-index: 99;
+#controls a:link,
+#controls a:visited {
+  text-decoration: none;
+  color: rgb(197, 22, 22);
+  text-shadow: 2px 2px #000;
+  z-index: 99;
 }
-
 
 .btn {
-    width: 2.5em;              /* 10em ÷ 4 */
-    height: 2.5rem;            /* 10rem ÷ 4 */
-    display: flex;
-    padding: 1.25px;           /* 5px ÷ 4 */
-    text-align: center;
-    background-color: #ce9c9c;
-    color: rgb(37, 35, 35);
-    position: relative;
-    top: -4.25rem;             /* -17rem ÷ 4 */
-    left: -1rem;               /* -4rem ÷ 4 */
-    border-radius: 50% 50% 0 50%;
-    border: 0.075rem solid rgb(252, 35, 7); /* 0.3rem ÷ 4 */
-    font-size: 0.5rem;         /* 2rem ÷ 4 */
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;   /* 0.2rem ÷ 4 */
-    line-height: 1.5;
-    cursor: pointer;
+  width: 2.5em; /* 10em ÷ 4 */
+  height: 2.5rem; /* 10rem ÷ 4 */
+  display: flex;
+  padding: 1.25px; /* 5px ÷ 4 */
+  text-align: center;
+  background-color: #ce9c9c;
+  color: rgb(37, 35, 35);
+  position: relative;
+  top: -4.25rem; /* -17rem ÷ 4 */
+  left: -1rem; /* -4rem ÷ 4 */
+  border-radius: 50% 50% 0 50%;
+  border: 0.075rem solid rgb(252, 35, 7); /* 0.3rem ÷ 4 */
+  font-size: 0.5rem; /* 2rem ÷ 4 */
+  text-transform: uppercase;
+  letter-spacing: 0.05rem; /* 0.2rem ÷ 4 */
+  line-height: 1.5;
+  cursor: pointer;
 }
 
-
 .letter {
-    width: 3.75rem;           /* 15rem ÷ 4 */
-    height: 6.25rem;          /* 25rem ÷ 4 */
-    background-color: #fff;
-    padding: 0.5rem 0.25rem;
-    color: #555;
-    box-shadow: 0 0 0.025rem #aaa; /* 0.1rem ÷ 4 */
-    font-family: 'Dancing Script', cursive;
-    font-size: 0.375rem;       /* 1.5rem ÷ 4 */
-    text-indent: 0.125rem;     /* 0.5rem ÷ 4 */
-    transform-origin: bottom;
-    transition: transform 1s;
+  width: 3.75rem; /* 15rem ÷ 4 */
+  height: 6.25rem; /* 25rem ÷ 4 */
+  background-color: #fff;
+  padding: 0.5rem 0.25rem;
+  color: #555;
+  box-shadow: 0 0 0.025rem #aaa; /* 0.1rem ÷ 4 */
+  font-family: "Dancing Script", cursive;
+  font-size: 0.375rem; /* 1.5rem ÷ 4 */
+  text-indent: 0.125rem; /* 0.5rem ÷ 4 */
+  transform-origin: bottom;
+  transition: transform 1s;
 }
 
 .change .letter {
-    transform: rotateX(-80deg);
-    transition: transform 1s 1s;
+  transform: rotateX(-80deg);
+  transition: transform 1s 1s;
 }
-
 
 .table {
-    position: relative;
-    right: 5rem;
-    width: 15rem; /* 60rem ÷ 4 */
-    height: 15rem;
-    background-image: radial-gradient(rgba(182, 172, 172, 0.9), rgba(31, 34, 26, 0.9));
-    border-radius: 50%;
-    border-bottom: 0.5rem solid rgb(40, 44, 46); /* 2rem ÷ 4 */
-    transform: rotateX(89deg) translateZ(7rem);
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  right: 5rem;
+  width: 15rem; /* 60rem ÷ 4 */
+  height: 15rem;
+  background-image: radial-gradient(
+    rgba(182, 172, 172, 0.9),
+    rgba(31, 34, 26, 0.9)
+  );
+  border-radius: 50%;
+  border-bottom: 0.5rem solid rgb(40, 44, 46); /* 2rem ÷ 4 */
+  transform: rotateX(89deg) translateZ(7rem);
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .table-leg {
-    width: 0.75rem; /* 3rem ÷ 4 */
-    height: 8.75rem; /* 35rem ÷ 4 */
-    background-color: rgba(40, 44, 46, 0.8);
-    position: absolute;
-    top: 7.5rem; /* 30rem ÷ 4 */
-    left: 7.125rem; /* 28.5rem ÷ 4 */
+  width: 0.75rem; /* 3rem ÷ 4 */
+  height: 8.75rem; /* 35rem ÷ 4 */
+  background-color: rgba(40, 44, 46, 0.8);
+  position: absolute;
+  top: 7.5rem; /* 30rem ÷ 4 */
+  left: 7.125rem; /* 28.5rem ÷ 4 */
 }
 
 .table-leg-1 {
-    transform: rotateX(-60deg) rotateZ(40deg);
-    transform-origin: top;
-    border-radius: 1.25rem 0.25rem;
-    border-right: 0.075rem solid rgb(40, 44, 46);
-    border-bottom: 0.075rem solid rgb(40, 44, 46);
+  transform: rotateX(-60deg) rotateZ(40deg);
+  transform-origin: top;
+  border-radius: 1.25rem 0.25rem;
+  border-right: 0.075rem solid rgb(40, 44, 46);
+  border-bottom: 0.075rem solid rgb(40, 44, 46);
 }
 
 .table-leg-2 {
-    transform: rotateX(-60deg) rotateZ(-40deg);
-    transform-origin: top;
-    border-radius: 0.25rem 1.25rem;
-    border-left: 0.075rem solid rgb(40, 44, 46);
-    border-bottom: 0.075rem solid rgb(40, 44, 46);
+  transform: rotateX(-60deg) rotateZ(-40deg);
+  transform-origin: top;
+  border-radius: 0.25rem 1.25rem;
+  border-left: 0.075rem solid rgb(40, 44, 46);
+  border-bottom: 0.075rem solid rgb(40, 44, 46);
 }
 
 .table-leg-3 {
-    transform: rotateX(-140deg);
-    transform-origin: top;
-    border-radius: 0.25rem;
-    border-left: 0.075rem solid rgb(40, 44, 46);
-    border-right: 0.075rem solid rgb(40, 44, 46);
+  transform: rotateX(-140deg);
+  transform-origin: top;
+  border-radius: 0.25rem;
+  border-left: 0.075rem solid rgb(40, 44, 46);
+  border-right: 0.075rem solid rgb(40, 44, 46);
+}
+
+.House-plant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transform: rotateX(-90deg) translateY(-40px) translateX(45%);
+}
+
+.plane {
+  width: 25vmin;
+  height: 25vmin;
+  background: transparent;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.cuboid {
+  --width: 30px;
+  --height: 30px;
+  --depth: 30px;
+
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  bottom: calc(45% - calc(var(--height)));
+  left: calc(50% - calc(var(--width) / 2));
+  transform-style: preserve-3d;
+  transform: translateZ(0); /* Needed to trigger 3D space */
+}
+
+.cuboid > div {
+  position: absolute;
+  border: 1px solid black;
+}
+
+.cuboid .top {
+  width: var(--width);
+  height: var(--depth);
+  background: radial-gradient(green 0% 40%, hsl(20, 48%, 23%) 40%);
+  transform: rotateX(90deg) translateZ(calc((var(--height) / 2) - 2px));
+  transform-origin: center;
+}
+
+.cuboid .bottom {
+  font-size: 20px;
+  width: var(--width);
+  height: var(--depth);
+  background: white;
+  position: absolute;
+  border: 1px solid black;
+  transform: rotateX(-90deg) translateZ(calc(var(--width) / 2));
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+
+.number {
+  width: 20px;
+  height: 20px;
+  font-size: 100px;
+  font-style: black;
+  background-image: url(/Images/number-5.png);
+  background-size: contain;
+  transform: rotateX(90deg) translateY(-10px) translateX(5px);
+}
+
+.cuboid .left {
+  width: var(--depth);
+  height: var(--height);
+  background: linear-gradient(to bottom, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
+  /* background-color: transparent; */
+  position: absolute;
+  border: 1px solid black;
+  transform: rotateY(-90deg) translateZ(calc(var(--width) / 2));
+  transform-origin: center;
+}
+
+.cuboid .right {
+  width: var(--depth);
+  height: var(--height);
+  background: linear-gradient(to bottom, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
+  position: absolute;
+  border: 1px solid black;
+  transform: rotateY(90deg) translateZ(calc(var(--width) / 2));
+  transform-origin: center;
+}
+
+.cuboid .front {
+  width: var(--width);
+  height: var(--height);
+  background: linear-gradient(to bottom, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
+  /* background-color: transparent; */
+  position: absolute;
+  border: 1px solid black;
+  transform: translateZ(calc(var(--depth) / 2));
+  transform-origin: center;
+}
+
+.cuboid .front:hover {
+  transform: rotateY(90deg) translateY(40px);
+}
+
+.cuboid .back {
+  width: var(--width);
+  height: var(--height);
+  background: linear-gradient(to top, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
+  position: absolute;
+  border: 1px solid black;
+  transform: rotateX(180deg) translateZ(calc(var(--depth) / 2));
+  transform-origin: center;
+}
+
+.plant {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(0vmin);
+  transform-style: preserve-3d;
+}
+
+.plant .leaf {
+  width: 2vmin;
+  height: 5vmin;
+  background: linear-gradient(
+    to right,
+    rgb(1, 39, 1) 0%,
+    rgb(0, 128, 0) 45% 55%,
+    rgb(1, 39, 1) 100%
+  );
+
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.plant .leaf-one {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-two {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(40deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-three {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(80deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-four {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(120deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-five {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(160deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-six {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(200deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-seven {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(240deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-eight {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(280deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .leaf-nine {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(320deg) rotateX(70deg) translateZ(-4vmin);
+}
+
+.plant .little-leaf {
+  width: 1.5vmin;
+  height: 4vmin;
+  background: linear-gradient(
+    to right,
+    rgb(1, 39, 1) 0%,
+    rgb(0, 128, 0) 45% 55%,
+    rgb(1, 39, 1) 100%
+  );
+
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.plant .little-leaf-one {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateX(60deg) translateZ(-3vmin);
+}
+
+.plant .little-leaf-two {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(72deg) rotateX(60deg) translateZ(-3vmin);
+}
+
+.plant .little-leaf-three {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(144deg) rotateX(60deg) translateZ(-3vmin);
+}
+
+.plant .little-leaf-four {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(216deg) rotateX(60deg) translateZ(-3vmin);
+}
+
+.plant .little-leaf-five {
+  position: absolute;
+  outline: 1px solid darkgreen;
+  transform: rotateY(288deg) rotateX(60deg) translateZ(-3vmin);
 }
