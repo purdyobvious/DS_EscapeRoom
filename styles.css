@@ -365,10 +365,7 @@ iframe {
   right: 5rem;
   width: 15rem; /* 60rem ÷ 4 */
   height: 15rem;
-  background-image: radial-gradient(
-    rgba(182, 172, 172, 0.9),
-    rgba(31, 34, 26, 0.9)
-  );
+
   border-radius: 50%;
   border-bottom: 0.5rem solid rgb(40, 44, 46); /* 2rem ÷ 4 */
   transform: rotateX(89deg) translateZ(7rem);
@@ -376,12 +373,14 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #61618b91;
+  border: 2px ridge;
 }
 
 .table-leg {
   width: 0.75rem; /* 3rem ÷ 4 */
   height: 8.75rem; /* 35rem ÷ 4 */
-  background-color: rgba(40, 44, 46, 0.8);
+  background-color: rgb(40 44 46);
   position: absolute;
   top: 7.5rem; /* 30rem ÷ 4 */
   left: 7.125rem; /* 28.5rem ÷ 4 */
