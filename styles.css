@@ -1,271 +1,377 @@
 :root {
-    --turnSpeed: 40s;
-    --speed: 300s;
-}
-
-@keyframes sceneRotateLeft {
-    to { transform: rotateY(-360deg);
-    }
-}
-
-@keyframes sceneRotateRight {
-    to { transform: rotateY(360deg);
-    }
-}
-
-@keyframes sceneMoveForward {
-    to { transform: translateZ(1000em);
-    }
-}
-
-@keyframes sceneMoveBack {
-        to { transform: translateZ(-1000em);
+            --turnSpeed: 40s;
+            --speed: 300s;
         }
-}
 
+        @keyframes sceneRotateLeft {
+            to { transform: rotateY(-360deg); }
+        }
 
-body {
-    background-color: #000;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    perspective: 10em;
-    perspective-origin: 50% calc(50% - 2em);
-    overflow: hidden;
-}
+        @keyframes sceneRotateRight {
+            to { transform: rotateY(360deg); }
+        }
 
-.scene {
-    position: relative;
-    transform-style: preserve-3d;
-    z-index: 1;
-}
+        @keyframes sceneMoveForward {
+            to { transform: translateZ(1000em); }
+        }
 
-.frontWall, .leftWall, .rightWall, .ceiling, .backWall {
-    position:absolute;
-    background-color: #f5eded;
-    width: 20em;
-    height: 20em;
-    top: -16em;
-    left: -10em;
-    transform: translateZ(-10em);
-    z-index: 1;
-    outline: 2px solid #000;
-}
+        @keyframes sceneMoveBack {
+            to { transform: translateZ(-1000em); }
+        }
 
-.leftWall {
-    left: -20em;
-    transform: rotateY(-90deg);
-    background-color: rgb(70, 54, 21);
-}
+        body {
+            background-color: #000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            perspective: 10em;
+            perspective-origin: 43% calc(14% - 3em); 
+            overflow: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-.rightWall {
-    transform: rotateY(90deg);
-    left: 0;
-    background-color: #fff;
-    background-color: rgb(70, 54, 21);
-}
+        .scene {
+            position: relative;
+            transform-style: preserve-3d;
+            z-index: 1;
+        }
 
-.floor {
-    background-color: #000;
-    background-image:  linear-gradient(135deg, #ffffff 25%, transparent 25%), linear-gradient(225deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%, #000 25%);
-    background-position:  1em 0, 1em 0, 0 0, 0 0;
-    background-size: 1em 1em;
-    background-repeat: repeat;
-    width: 20em;
-    height: 20em;
-    top: 1em;
-    z-index: 0;
-    position: absolute;
-    transform:
-        translate(-50%, -50%)
-        rotateX(90deg)
-        translateZ(-3em);
-        
-    z-index: 1;
-}
+        .frontWall, .leftWall, .rightWall, .ceiling, .backWall {
+            position: absolute;
+            background-color: #f5eded;
+            width: 20em;
+            height: 20em;
+            top: -16em;
+            left: -10em;
+            transform-style: preserve-3d;
+            transform: translateZ(-10em);
+            z-index: 1;
+            outline: 2px solid #000;
+        }
 
+        .leftWall {
+            left: -20em;
+            transform: rotateY(-90deg);
+            background-color: rgb(70, 54, 21);
+        }
 
+        .rightWall {
+            transform: rotateY(90deg);
+            left: 0;
+            background-color: rgb(70, 54, 21);
+        }
 
-.ceiling {
-    background-color: #a19292;
-    /* background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #222297 17px ), repeating-linear-gradient( #03076055, #030760 ); */
-    top:0;
-    left:0;
-    transform:
-        translate(-50%, -55%)
-        rotateX(90deg)
-        translateZ(15em);
-    z-index: 1;
-}
+        .floor {
+            background-color: #000;
+            background-image: linear-gradient(135deg, #ffffff 25%, transparent 25%), 
+                            linear-gradient(225deg, #ffffff 25%, transparent 25%), 
+                            linear-gradient(45deg, #ffffff 25%, transparent 25%), 
+                            linear-gradient(315deg, #ffffff 25%, #000 25%);
+            background-position: 1em 0, 1em 0, 0 0, 0 0;
+            background-size: 1em 1em;
+            background-repeat: repeat;
+            width: 20em;
+            height: 20em;
+            top: 1em;
+            z-index: 0;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
+            z-index: 1;
+        }
 
+        .ceiling {
+            background-color: #a19292;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -55%) rotateX(90deg) translateZ(15em);
+            z-index: 1;
+        }
 
-.frontWall, .backWall {
-    clip-path: polygon(0% 0%,
-    0% 100%,
-    33% 100%,
-    33% 39%,
-    67% 39%,
-    68% 100%,
-    33% 100%,
-    33% 100%,
-    100% 100%,
-    100% 0%);
-    z-index: 1;
-}
+        .frontWall, .backWall {
+            clip-path: polygon(0% 0%, 0% 100%, 33% 100%, 33% 39%, 67% 39%, 68% 100%, 33% 100%, 33% 100%, 100% 100%, 100% 0%);
+            z-index: 1;
+        }
 
-.frontWall {
-    background-color: rgb(70, 54, 21);
-    transform: translateZ(-10em);
-}
+        .frontWall {
+            background-color: rgb(70, 54, 21);
+            transform: translateZ(-10em);
+        }
 
-.backWall {
-    background-color: rgb(70, 54, 21);
-    transform: translate3d(-25rem, 0rem, 25rem);
-    left: 0;
-    z-index: 1;
-}
+        .backWall {
+            background-color: rgb(70, 54, 21);
+            transform: translate3d(-25rem, 0rem, 25rem);
+            left: 0;
+            z-index: 1;
+        }
 
-.scene {
-    animation:
-    sceneRotateLeft var(--turnSpeed) infinite linear,
-    sceneRotateRight var(--turnSpeed) infinite linear,
-    sceneMoveForward var(--speed) infinite linear,
-    sceneMoveBack var(--speed) infinite linear;
-    animation-play-state: paused, paused, paused, paused;
-}
+        .scene {
+            animation: sceneRotateLeft var(--turnSpeed) infinite linear,
+                      sceneRotateRight var(--turnSpeed) infinite linear,
+                      sceneMoveForward var(--speed) infinite linear,
+                      sceneMoveBack var(--speed) infinite linear;
+            animation-play-state: paused, paused, paused, paused;
+        }
 
-:target.turnLeft ~ .scene, #turnLeft:focus ~ .scene {
-    animation-play-state: running, paused, paused, paused;
-}
+        :target.turnLeft ~ .scene, #turnLeft:focus ~ .scene {
+            animation-play-state: running, paused, paused, paused;
+        }
 
-:target.turnRight ~ .scene, #turnRight:focus ~ .scene {
-animation-play-state: paused, running, paused, paused;
-}
+        :target.turnRight ~ .scene, #turnRight:focus ~ .scene {
+            animation-play-state: paused, running, paused, paused;
+        }
 
-:target.moveBack ~ .scene, #moveBack:focus ~ .scene {
-animation-play-state: paused, paused, paused, running;
-}
+        :target.moveBack ~ .scene, #moveBack:focus ~ .scene {
+            animation-play-state: paused, paused, paused, running;
+        }
 
-:target.moveForward ~ .scene, #moveForward:focus ~ .scene {
-animation-play-state: paused, paused, running, paused;
-}
+        :target.moveForward ~ .scene, #moveForward:focus ~ .scene {
+            animation-play-state: paused, paused, running, paused;
+        }
 
-#moveForward, #turnLeft, #stop, #turnRight, #moveBack {
-    position: absolute;
-    left: -5000px;
-    top:-5000px;
-}
+        #moveForward, #turnLeft, #stop, #turnRight, #moveBack {
+            position: absolute;
+            left: -5000px;
+            top: -5000px;
+        }
 
-.flex-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-}
+        .flex-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+        }
 
-.col {
-    width: 32%;
-    text-align: center;
-    z-index: 99;
-}
+        .col {
+            width: 32%;
+            text-align: center;
+            z-index: 99;
+        }
 
-#controls a:link, #controls a:visited {
-    text-decoration: none;
-    color:rgb(197, 22, 22);
-    text-shadow: 2px 2px #000;
-    z-index: 99;
-}
+        #controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+        }
 
+        #controls a:link, #controls a:visited {
+            text-decoration: none;
+            color: rgb(197, 22, 22);
+            text-shadow: 2px 2px #000;
+            z-index: 99;
+            font-size: 24px;
+            padding: 10px;
+            display: block;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            margin: 2px;
+            transition: background 0.3s;
+        }
 
-.btn {
-    width: 2.5em;              /* 10em ÷ 4 */
-    height: 2.5rem;            /* 10rem ÷ 4 */
-    display: flex;
-    padding: 1.25px;           /* 5px ÷ 4 */
-    text-align: center;
-    background-color: #ce9c9c;
-    color: rgb(37, 35, 35);
-    position: relative;
-    top: -4.25rem;             /* -17rem ÷ 4 */
-    left: -1rem;               /* -4rem ÷ 4 */
-    border-radius: 50% 50% 0 50%;
-    border: 0.075rem solid rgb(252, 35, 7); /* 0.3rem ÷ 4 */
-    font-size: 0.5rem;         /* 2rem ÷ 4 */
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;   /* 0.2rem ÷ 4 */
-    line-height: 1.5;
-    cursor: pointer;
-}
+        #controls a:hover, #controls a:focus {
+            background: rgba(197, 22, 22, 0.8);
+            color: white;
+        }
 
+        .btn {
+            width: 8.5em;
+            height: 2.5rem;
+            display: flex;
+            padding: 1.25px;
+            text-align: center;
+            background-color: #ce9c9c;
+            color: rgb(37, 35, 35);
+            position: relative;
+            top: -4.25rem;
+            left: -1rem;
+            border-radius: 50% 50% 0 50%;
+            border: 0.075rem solid rgb(252, 35, 7);
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            line-height: 1.5;
+            cursor: pointer;
+            transform-style: preserve-3d;
+        }
 
-.letter {
-    width: 3.75rem;           /* 15rem ÷ 4 */
-    height: 6.25rem;          /* 25rem ÷ 4 */
-    background-color: #fff;
-    padding: 0.5rem 0.25rem;
-    color: #555;
-    box-shadow: 0 0 0.025rem #aaa; /* 0.1rem ÷ 4 */
-    font-family: 'Dancing Script', cursive;
-    font-size: 0.375rem;       /* 1.5rem ÷ 4 */
-    text-indent: 0.125rem;     /* 0.5rem ÷ 4 */
-    transform-origin: bottom;
-    transition: transform 1s;
-}
+        .letter {
+            width: 3.75rem;
+            height: 6.25rem;
+            background-color: #fff;
+            padding: 0.5rem 0.25rem;
+            color: #555;
+            box-shadow: 0 0 0.025rem #aaa;
+            font-family: 'Dancing Script', cursive;
+            font-size: 0.375rem;
+            text-indent: 0.125rem;
+            transform-style: preserve-3d;
+            transform-origin: bottom;
+            transition: transform 1s;
+        }
 
-.change .letter {
-    transform: rotateX(-80deg);
-    transition: transform 1s 1s;
-}
+        .change .letter {
+            transform: rotateX(-80deg);
+            transition: transform 1s 1s;
+        }
 
+        .table {
+            position: relative;
+            right: 5rem;
+            width: 15rem;
+            height: 15rem;
+            background-image: radial-gradient(rgba(182, 172, 172, 0.9), rgba(31, 34, 26, 0.9));
+            border-radius: 50%;
+            border-bottom: 0.5rem solid rgb(40, 44, 46);
+            transform: rotateX(89deg) translateZ(7rem);
+            transform-style: preserve-3d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.table {
-    position: relative;
-    right: 5rem;
-    width: 15rem; /* 60rem ÷ 4 */
-    height: 15rem;
-    background-image: radial-gradient(rgba(182, 172, 172, 0.9), rgba(31, 34, 26, 0.9));
-    border-radius: 50%;
-    border-bottom: 0.5rem solid rgb(40, 44, 46); /* 2rem ÷ 4 */
-    transform: rotateX(89deg) translateZ(7rem);
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .table-leg {
+            width: 0.75rem;
+            height: 8.75rem;
+            background-color: rgba(40, 44, 46, 0.8);
+            position: absolute;
+            top: 7.5rem;
+            left: 7.125rem;
+        }
 
+        .table-leg-1 {
+            transform: rotateX(-60deg) rotateZ(40deg);
+            transform-origin: top;
+            border-radius: 1.25rem 0.25rem;
+            border-right: 0.075rem solid rgb(40, 44, 46);
+            border-bottom: 0.075rem solid rgb(40, 44, 46);
+        }
 
-.table-leg {
-    width: 0.75rem; /* 3rem ÷ 4 */
-    height: 8.75rem; /* 35rem ÷ 4 */
-    background-color: rgba(40, 44, 46, 0.8);
-    position: absolute;
-    top: 7.5rem; /* 30rem ÷ 4 */
-    left: 7.125rem; /* 28.5rem ÷ 4 */
-}
+        .table-leg-2 {
+            transform: rotateX(-60deg) rotateZ(-40deg);
+            transform-origin: top;
+            border-radius: 0.25rem 1.25rem;
+            border-left: 0.075rem solid rgb(40, 44, 46);
+            border-bottom: 0.075rem solid rgb(40, 44, 46);
+        }
 
-.table-leg-1 {
-    transform: rotateX(-60deg) rotateZ(40deg);
-    transform-origin: top;
-    border-radius: 1.25rem 0.25rem;
-    border-right: 0.075rem solid rgb(40, 44, 46);
-    border-bottom: 0.075rem solid rgb(40, 44, 46);
-}
+        .table-leg-3 {
+            transform: rotateX(-140deg);
+            transform-origin: top;
+            border-radius: 0.25rem;
+            border-left: 0.075rem solid rgb(40, 44, 46);
+            border-right: 0.075rem solid rgb(40, 44, 46);
+        }
 
-.table-leg-2 {
-    transform: rotateX(-60deg) rotateZ(-40deg);
-    transform-origin: top;
-    border-radius: 0.25rem 1.25rem;
-    border-left: 0.075rem solid rgb(40, 44, 46);
-    border-bottom: 0.075rem solid rgb(40, 44, 46);
-}
+        .sidewalk {
+            position: relative;
+            width: 17.55rem;
+            height: 30rem;
+            background-color: grey;
+            transform-style: preserve-3d;
+            transform: translate(-48%, -94%) rotateX(90deg) translateY(40rem) translateZ(-2em);
+        }
 
-.table-leg-3 {
-    transform: rotateX(-140deg);
-    transform-origin: top;
-    border-radius: 0.25rem;
-    border-left: 0.075rem solid rgb(40, 44, 46);
-    border-right: 0.075rem solid rgb(40, 44, 46);
-}
+        .treeContainer {
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .tree {
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+
+        .tree-trunk {
+            position: absolute;
+            width: 0.5em;
+            height: 4em;
+            background-color: #4c2f0a;
+            border-radius: 0.1em;
+            transform-origin: bottom center;
+            bottom: 0;
+        }
+
+        .tree-foliage {
+            position: absolute;
+            width: 3em;
+            height: 3em;
+            background-color: #2d5a2d;
+            border-radius: 50%;
+            bottom: 3em;
+            left: -1.25em;
+            box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+        }
+
+        .tree-foliage::before {
+            content: '';
+            position: absolute;
+            width: 2em;
+            height: 2em;
+            background-color: #3d7a3d;
+            border-radius: 50%;
+            top: -0.8em;
+            left: 0.5em;
+        }
+
+        .tree-foliage::after {
+            content: '';
+            position: absolute;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: #4d8a4d;
+            border-radius: 50%;
+            top: -0.3em;
+            right: 0.2em;
+        }
+
+        /* Tree positioning along the sidewalk */
+        .tree-left-1 {
+            transform: translateZ(8em) translateX(-12em) translateY(-2em);
+        }
+
+        .tree-left-2 {
+            transform: translateZ(15em) translateX(-11em) translateY(-2em);
+        }
+
+        .tree-left-3 {
+            transform: translateZ(22em) translateX(-13em) translateY(-2em);
+        }
+
+        .tree-right-1 {
+            transform: translateZ(8em) translateX(8em) translateY(-2em);
+        }
+
+        .tree-right-2 {
+            transform: translateZ(15em) translateX(9em) translateY(-2em);
+        }
+
+        .tree-right-3 {
+            transform: translateZ(22em) translateX(7em) translateY(-2em);
+        }
+
+        .instructions {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            z-index: 100;
+        }
+
+        .instructions h3 {
+            margin: 0 0 10px 0;
+            color: rgb(197, 22, 22);
+        }
+
+        .instructions p {
+            margin: 5px 0;
+        }
