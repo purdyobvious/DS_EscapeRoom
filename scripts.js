@@ -180,6 +180,18 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Press "i" to toggle instructions visibility');
 });
 
-document.querySelector('btn').addEventListener('click', () => {
-    document.querySelector('.letter').classList.toggle('change');
-});
+const cubeContainer = document.querySelector('.cube-container');
+        
+        // Add click event listener
+        cubeContainer.addEventListener('click', function() {
+            this.classList.toggle('clicked');
+        });
+        
+        // Remove the clicked class after animation completes
+        cubeContainer.addEventListener('animationend', function() {
+            this.classList.remove('clicked');
+        });
+
+ document.querySelector('.letter').addEventListener('click', () => {
+            document.body.classList.toggle('change');
+        });
