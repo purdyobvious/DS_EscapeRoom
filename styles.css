@@ -885,27 +885,27 @@ iframe {
 
 /* Tree positioning along the sidewalk */
 .tree-left-1 {
-  transform: translateZ(8em) translateX(-12em) translateY(-20em);
+  transform: translateZ(14em) translateX(-5em) translateY(-20em);
 }
 
 .tree-left-2 {
-  transform: translateZ(15em) translateX(-11em) translateY(-20em);
+  transform: translateZ(18em) translateX(-5em) translateY(-20em);
 }
 
 .tree-left-3 {
-  transform: translateZ(22em) translateX(-13em) translateY(-20em);
+  transform: translateZ(21em) translateX(-5em) translateY(-20em);
 }
 
 .tree-right-1 {
-  transform: translateZ(8em) translateX(8em) translateY(-20em);
+  transform: translateZ(14em) translateX(5em) translateY(-20em);
 }
 
 .tree-right-2 {
-  transform: translateZ(15em) translateX(9em) translateY(-20em);
+  transform: translateZ(18em) translateX(5em) translateY(-20em);
 }
 
 .tree-right-3 {
-  transform: translateZ(22em) translateX(7em) translateY(-20em);
+  transform: translateZ(21em) translateX(5em) translateY(-20em);
 }
 
 .instructions {
@@ -928,3 +928,4 @@ iframe {
 .instructions p {
   margin: 5px 0;
 }
+

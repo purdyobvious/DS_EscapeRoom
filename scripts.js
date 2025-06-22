@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'a':
             case 'arrowleft':
                 controls.turnLeft.checked = true;
-                event.preventDefault();
+                event.preventDefault();g
                 break;
             case 's':
             case 'arrowdown':
@@ -192,6 +192,9 @@ const cubeContainer = document.querySelector('.cube-container');
             this.classList.remove('clicked');
         });
 
- document.querySelector('.letter').addEventListener('click', () => {
+document.querySelector('.letter').addEventListener('click', () => {
             document.body.classList.toggle('change');
         });
+
+
+
