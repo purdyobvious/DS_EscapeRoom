@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mystery Mansion</title>
+    <link rel="stylesheet" href="./styles/start.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="game-title">Find your way out.. If you dare.</h1>
+      <h2 class="game-subtitle">Open the doors to start your adventure!</h2>
+
+      <div class="wrapper">
+        <div id="left-door" class="door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div id="left-knob" class="knob"></div>
+        </div>
+        <button class="start-button" onclick="startGame()">Start Game</button>
+        <div id="right-door" class="door">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div id="right-knob" class="knob"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function startGame() {
+        alert("Game Starting...");
+        window.location.href = "../index.html";
+      }
+    </script>
+  </body>
+</html>
