@@ -934,3 +934,158 @@ iframe {
 .instructions p {
   margin: 5px 0;
 }
+
+.rose-frame {
+  display: flex;
+  position: relative;
+  gap: 20px;
+  width: 100px;
+  height: 180px;
+  background-color: lightgray;
+  border: 20px inset black;
+  top: 40%;
+  left: 50px;
+}
+
+.rose-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* padding-left: 20px; */
+  width: 100px;
+  height: 100px;
+  /* position: absolute; */
+  background-color: lightgray;
+  margin-bottom: 10px;
+  scale: 0.5;
+}
+
+.rose-container div {
+  position: absolute;
+}
+
+.rose-container .rose-petals > div {
+  background: #d52d58;
+  width: 45px;
+  height: 80px;
+  position: absolute;
+}
+
+.rose-container .rose-petals > div:nth-child(1) {
+  border-radius: 15px;
+  left: 20px;
+  top: -6px;
+  background: #d52d58;
+}
+.rose-container .rose-petals > div:nth-child(2),
+.rose-container .rose-petals > div:nth-child(4),
+.rose-container .rose-petals > div:nth-child(6) {
+  border-radius: 0px 30px 0px 30px;
+  background: #b81b43;
+  left: 0;
+  transform-origin: bottom right;
+}
+.rose-container .rose-petals > div:nth-child(3),
+.rose-container .rose-petals > div:nth-child(5),
+.rose-container .rose-petals > div:nth-child(7) {
+  border-radius: 30px 0px 30px 0px;
+  left: 40px;
+  transform-origin: bottom left;
+}
+
+.rose-container .rose-petals > div:nth-child(4) {
+  z-index: 3;
+  background: #b81b43;
+  top: 5px;
+  height: 75px;
+  transform: rotate(-30deg);
+}
+.rose-container .rose-petals > div:nth-child(5) {
+  transform: rotate(30deg);
+  z-index: 2;
+  background: #b81b43;
+  top: 5px;
+  height: 75px;
+}
+.rose-container .rose-petals > div:nth-child(6) {
+  z-index: 1;
+  background: #c9204b;
+  top: "";
+  height: "";
+}
+.rose-container .rose-petals > div:nth-child(7) {
+  z-index: 0;
+  background: #c9204b;
+  top: "";
+  height: "";
+}
+.rose-container .rose-leaves > div:nth-last-child(1) {
+  width: 55px;
+  height: 30px;
+  background: #338f37;
+  position: absolute;
+  top: 60px;
+  left: 15px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+.rose-container .rose-leaves > div:nth-child(1) {
+  width: 6px;
+  height: 230px;
+  border: none;
+  top: 80px;
+  background: #066406;
+  left: 40px;
+}
+.rose-container .thorns > div {
+  width: 30px;
+  height: 30px;
+  background: #066406;
+  top: 100px;
+  left: 10px;
+}
+.rose-container .thorns > div:after {
+  width: 41px;
+  height: 31px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: lightgray;
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 17px;
+}
+.rose-container .thorns > div:before {
+  width: 41px;
+  height: 31px;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: lightgray;
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: -11px;
+  z-index: 0;
+}
+.rose-container .thorns > div:nth-child(2) {
+  top: 150px;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: 45px;
+}
+.rose-container .thorns > div:nth-child(3) {
+  top: 180px;
+}
+.rose-container .thorns > div:nth-child(4) {
+  top: 220px;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: 45px;
+}
