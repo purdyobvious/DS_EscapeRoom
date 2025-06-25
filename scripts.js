@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'a':
             case 'arrowleft':
                 controls.turnLeft.checked = true;
-                event.preventDefault();g
+                event.preventDefault();
                 break;
             case 's':
             case 'arrowdown':

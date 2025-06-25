@@ -36,7 +36,7 @@ body {
   font-size: 40px;
   perspective: 10em;
   perspective-origin: 43% calc(14% - 3em);
-  /* transform: rotateX(70deg); */
+  transform: rotateX(0deg) translate(20px, 500px);
   overflow: hidden;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -187,8 +187,8 @@ body {
 
 #controls {
   position: fixed;
-  bottom: 20px;
-  left: 50%;
+  bottom: 650px;
+  left: 94%;
   transform: translateX(-50%);
   z-index: 100;
 }
@@ -534,7 +534,6 @@ iframe {
   right: 5rem;
   width: 15rem; /* 60rem ÷ 4 */
   height: 15rem;
-
   border-radius: 50%;
   border-bottom: 0.5rem solid rgb(40, 44, 46); /* 2rem ÷ 4 */
   transform: rotateX(89deg) translateZ(18rem);
@@ -928,4 +927,3 @@ iframe {
 .instructions p {
   margin: 5px 0;
 }
-
