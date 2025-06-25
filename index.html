@@ -1,51 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shapes training</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <a tabindex="1" accesskey="W" href="#moveForward" class="moveForward" id="moveForward"></a>
-    <a tabindex="2" accesskey="A" class="turnLeft" id="turnLeft" href="#turnLeft"></a>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+    </head>
+    <body>
+    <div class="instructions">
+        <h3>Navigation Controls</h3>
+        <p>Use arrow keys below or keyboard shortcuts:</p>
+        <p>W/↑ - Move Forward</p>
+        <p>A/← - Turn Left</p>
+        <p>S/↓ - Move Back</p>
+        <p>D/→ - Turn Right</p>
+        <p>X/● - Stop</p>
+    </div>
+
+    <a
+      tabindex="1"
+      accesskey="W"
+      href="#moveForward"
+      class="moveForward"
+      id="moveForward"
+    ></a>
+    <a
+      tabindex="2"
+      accesskey="A"
+      class="turnLeft"
+      id="turnLeft"
+      href="#turnLeft"
+    ></a>
     <a tabindex="5" accesskey="X" class="stop" id="stop" href="#stop"></a>
-    <a tabindex ="3" accesskey="D" class="turnRight" id="turnRight" href="#turnRight"></a>
-    <a tabindex="4" accesskey="S" class="moveBack" id="moveBack" href="#moveBack"></a>
+    <a
+      tabindex="3"
+      accesskey="D"
+      class="turnRight"
+      id="turnRight"
+      href="#turnRight"
+    ></a>
+    <a
+      tabindex="4"
+      accesskey="S"
+      class="moveBack"
+      id="moveBack"
+      href="#moveBack"
+    ></a>
 
     <div class="scene">
         <div class="frontWall"></div>
         <div class="leftWall"></div>
         <div class="rightWall"></div>
-        <div class="btn"></div>
-        <div class="table">
-            <h3 class="letter">Letter text</h3>
-            <div class="table-leg table-leg-1"></div>
-            <div class="table-leg table-leg-2"></div>
-            <div class="table-leg table-leg-3"></div>
+        <div class="cube-container">
+            <div class="cube-face front">?</div>
+            <div class="cube-face back">?</div>
+            <div class="cube-face right">?</div>
+            <div class="cube-face left">?</div>
+            <div class="cube-face top">?</div>
+            <div class="cube-face bottom">3</div>
         </div>
-        <div class="floor"></div>
-        <div class="ceiling"></div>
-        <div class="backWall"></div>
+    <div class="table">
+        <h3 class="letter">Letter text</h3>
+        <div class="table-leg table-leg-1"></div>
+        <div class="table-leg table-leg-2"></div>
+        <div class="table-leg table-leg-3"></div>
+      </div>
+      <div class="floor">
+        <div class="House-plant">
+          <div class="plane">
+            <div class="plant">
+              <div class="leaf leaf-one"></div>
+              <div class="leaf leaf-two"></div>
+              <div class="leaf leaf-three"></div>
+              <div class="leaf leaf-four"></div>
+              <div class="leaf leaf-five"></div>
+              <div class="leaf leaf-six"></div>
+              <div class="leaf leaf-seven"></div>
+              <div class="leaf leaf-eight"></div>
+              <div class="leaf leaf-nine"></div>
+              <div class="little-leaf little-leaf-one"></div>
+              <div class="little-leaf little-leaf-two"></div>
+              <div class="little-leaf little-leaf-three"></div>
+              <div class="little-leaf little-leaf-four"></div>
+              <div class="little-leaf little-leaf-five"></div>
+            </div>
+            <div class="cuboid">
+              <div class="top"></div>
+              <div class="bottom">
+                <div class="number">5</div>
+              </div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="front"></div>
+              <div class="back"></div>
+            </div>
+          </div>
+        </div>
+        <div class="television">
+          <div class="television__top">
+            <div class="television__antenna television__antenna--left"></div>
+            <div class="television__antenna television__antenna--right"></div>
+            <div class="television__antenna__base"></div>
+          </div>
+          <!-- television__top -->
+          <div class="television__center">
+            <div class="television__screen">
+              <iframe
+                src="https://zoomquilt.org/"
+                frameborder="0"
+                id="tv"
+                name="tv"
+              ></iframe>
+            </div>
+            <!-- television__screen -->
+            <div class="television__channels-wrapper">
+              <ul class="television__channels">
+                <li class="television__channel">
+                  <a
+                    href="http://www.youtube.com/embed/SRu6YRr1KtM"
+                    title="Channel 1"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="http://www.youtube.com/embed/oRdxUFDoQe0"
+                    title="Channel 2"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="http://www.youtube.com/embed/EGikhmjTSZI"
+                    title="Channel 3"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="http://www.youtube.com/embed/06qJVpUSKZY"
+                    title="Channel 4"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="http://www.youtube.com/embed/v_09wFxoaeQ"
+                    title="Channel 5"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="http://www.youtube.com/embed/Tj75Arhq5ho"
+                    title="Channel 6"
+                    target="tv"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- television__channels-wrapper -->
+          </div>
+          <!-- television__center -->
+          <div class="television__base">
+            <div class="television__foot television__foot--left"></div>
+            <div class="television__foot television__foot--right"></div>
+          </div>
+          <!-- television__base -->
+        </div>
+      </div>
+      <div class="ceiling"></div>
+      <div class="backWall"></div>
+      <div class="welcomeMat"></div>
+        <div class="sidewalk"></div>
+        <div class="treeContainer">
+            <!-- Left side trees -->
+            <div class="tree tree-left-1">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-left-2">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-left-3">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            
+            <!-- Right side trees -->
+            <div class="tree tree-right-1">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-right-2">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-right-3">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+        </div>
     </div>
-
+    </div>
+    </div>
     <div id="controls">
         <div class="flex-grid">
             <div class="col"></div>
-            <div class="col"><a href="#moveForward">&uarr;</a></div>
+            <div class="col">
+                <label for="moveForward">
+                    <a href="#moveForward">▲</a>
+                </label>
+            </div>
             <div class="col"></div>
         </div>
         <div class="flex-grid">
-            <div class="col"><a href="#turnLeft">&larr;</a></div>
-            <div class="col"><a href="#stop">&bull;</a></div>
-            <div class="col"><a  href="#turnRight">&rarr;</a></div>
+            <div class="col">
+                <label for="turnLeft">
+                    <a href="#turnLeft">◄</a>
+                </label>
+            </div>
+            <div class="col">
+                <label for="stop">
+                    <a href="#stop">■</a>
+                </label>
+            </div>
+            <div class="col">
+                <label for="turnRight">
+                    <a href="#turnRight">►</a>
+                </label>
+            </div>
         </div>
         <div class="flex-grid">
             <div class="col"></div>
-            <div class="col"><a href="#moveBack">&darr;</a></div>
+            <div class="col">
+                <label for="moveBack">
+                    <a href="#moveBack">▼</a>
+                </label>
+            </div>
             <div class="col"></div>
         </div>
     </div>
-    <script src="./scripts.js"></script>
-</body>
+        
+
+    <script src="styles.js"></script>
+  </body>
 </html>
+
