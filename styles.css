@@ -118,12 +118,13 @@ body {
     100% 100%,
     100% 0%
   );
-  z-index: 1;
 }
 
 .frontWall {
   background-color: rgb(70, 54, 21);
   transform: translateZ(-10em);
+  transform-style: preserve-3d;
+  z-index: 1;
 }
 
 .backWall {
@@ -935,16 +936,27 @@ iframe {
   margin: 5px 0;
 }
 
-.rose-frame {
-  display: flex;
+.rose-number {
+  position: absolute;
+  height: 25px;
+  width: 25px;
   position: relative;
+  top: 45%;
+  left: 125px;
+  font-size: 50px;
+  color: cornflowerblue;
+  transform: translateX(-400px) translateZ(-395px) translateY(-200px);
+}
+
+.rose-frame {
+  position: absolute;
+  display: flex;
   gap: 20px;
   width: 100px;
   height: 180px;
   background-color: lightgray;
   border: 20px inset black;
-  top: 40%;
-  left: 50px;
+  transform: translateX(-340px) translateZ(-390px) translateY(-270px);
 }
 
 .rose-container {
@@ -958,6 +970,12 @@ iframe {
   background-color: lightgray;
   margin-bottom: 10px;
   scale: 0.5;
+  transform-style: preserve-3d;
+}
+
+.rose-frame:hover {
+  transform-origin: bottom;
+  transform: translateY(-300px) translateX(-300px);
 }
 
 .rose-container div {
