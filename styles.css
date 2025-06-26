@@ -593,15 +593,15 @@ iframe {
   }
 }
 
-.plane {
-  width: 25vmin;
-  height: 25vmin;
+.House-plant .plane {
+  width: 146px;
+  height: 146px;
   background: transparent;
   transform: rotateX(0deg) rotateY(0deg);
   transform-style: preserve-3d;
 }
 
-.cuboid {
+.House-plant .cuboid {
   --width: 50px;
   --height: 50px;
   --depth: 50px;
@@ -615,12 +615,12 @@ iframe {
   transform: translateZ(0); /* Needed to trigger 3D space */
 }
 
-.cuboid > div {
+.House-plant .cuboid > div {
   position: absolute;
   border: 1px solid black;
 }
 
-.cuboid .top {
+.House-plant .cuboid .top {
   width: var(--width);
   height: var(--depth);
   background: radial-gradient(green 0% 40%, hsl(20, 48%, 23%) 40%);
@@ -628,7 +628,7 @@ iframe {
   transform-origin: center;
 }
 
-.cuboid .bottom {
+.House-plant .cuboid .bottom {
   font-size: 20px;
   width: var(--width);
   height: var(--depth);
@@ -640,7 +640,7 @@ iframe {
   transform-style: preserve-3d;
 }
 
-.number {
+.House-plant .number {
   width: 20px;
   height: 20px;
   font-size: 100px;
@@ -650,7 +650,7 @@ iframe {
   transform: rotateX(90deg) translateY(-10px) translateX(5px);
 }
 
-.cuboid .left {
+.House-plant .cuboid .left {
   width: var(--depth);
   height: var(--height);
   background: linear-gradient(to bottom, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
@@ -661,7 +661,7 @@ iframe {
   transform-origin: center;
 }
 
-.cuboid .right {
+.House-plant .cuboid .right {
   width: var(--depth);
   height: var(--height);
   background: linear-gradient(to bottom, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
@@ -671,7 +671,7 @@ iframe {
   transform-origin: center;
 }
 
-.cuboid .front {
+.House-plant .cuboid .front {
   width: var(--width);
   height: var(--height);
   background: linear-gradient(to bottom, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
@@ -682,11 +682,11 @@ iframe {
   transform-origin: center;
 }
 
-.cuboid .front:hover {
+.House-plant .cuboid .front:hover {
   transform: rotateY(90deg) translateY(40px);
 }
 
-.cuboid .back {
+.House-plant .cuboid .back {
   width: var(--width);
   height: var(--height);
   background: linear-gradient(to top, hsl(20, 60%, 45%), hsl(20, 61%, 26%));
@@ -696,20 +696,20 @@ iframe {
   transform-origin: center;
 }
 
-.plant {
+.House-plant .plant {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: absolute;
   top: 48%;
   left: 50%;
-  transform: translate(-50%, -50%) translateZ(0vmin);
+  transform: translate(-50%, -50%) translateZ(0px);
   transform-style: preserve-3d;
 }
 
-.plant .leaf {
-  width: 6vmin;
-  height: 14vmin;
+.House-plant .plant .leaf {
+  width: 35.1px;
+  height: 81.9px;
   background: linear-gradient(
     to right,
     rgb(1, 39, 1) 0%,
@@ -724,64 +724,64 @@ iframe {
   animation: wiggle 20s infinite alternate;
 }
 
-.plant .leaf-one {
+.House-plant .plant .leaf-one {
   position: absolute;
   outline: 1px solid darkgreen;
 
-  transform: rotateX(70deg) translateZ(-8vmin);
+  transform: rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-two {
+.House-plant .plant .leaf-two {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(40deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(40deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-three {
+.House-plant .plant .leaf-three {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(80deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(80deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-four {
+.House-plant .plant .leaf-four {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(120deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(120deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-five {
+.House-plant .plant .leaf-five {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(160deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(160deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-six {
+.House-plant .plant .leaf-six {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(200deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(200deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-seven {
+.House-plant .plant .leaf-seven {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(240deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(240deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-eight {
+.House-plant .plant .leaf-eight {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(280deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(280deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .leaf-nine {
+.House-plant .plant .leaf-nine {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(320deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(320deg) rotateX(70deg) translateZ(-46.8px);
 }
 
-.plant .little-leaf {
-  width: 3vmin;
-  height: 10vmin;
+.House-plant .plant .little-leaf {
+  width: 17.55px;
+  height: 58.5px;
   background: linear-gradient(
     to right,
     rgb(1, 39, 1) 0%,
@@ -796,34 +796,34 @@ iframe {
   animation: wiggle 20s 1s infinite alternate;
 }
 
-.plant .little-leaf-one {
+.House-plant .plant .little-leaf-one {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateX(60deg) translateZ(-4vmin);
+  transform: rotateX(60deg) translateZ(-23.4px);
 }
 
-.plant .little-leaf-two {
+.House-plant .plant .little-leaf-two {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(72deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(72deg) rotateX(60deg) translateZ(-23.4px);
 }
 
-.plant .little-leaf-three {
+.House-plant .plant .little-leaf-three {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(144deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(144deg) rotateX(60deg) translateZ(-23.4px);
 }
 
-.plant .little-leaf-four {
+.House-plant .plant .little-leaf-four {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(216deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(216deg) rotateX(60deg) translateZ(-23.4px);
 }
 
-.plant .little-leaf-five {
+.House-plant .plant .little-leaf-five {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(288deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(288deg) rotateX(60deg) translateZ(-23.4px);
 }
 
 .sidewalk {
