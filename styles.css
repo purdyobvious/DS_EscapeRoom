@@ -448,6 +448,34 @@ iframe {
             transform: translateZ(-11rem);
         }
 
+        .toy-box {
+          width: 12rem;
+          height: 8rem;
+          position: relative;
+          transform-style: preserve-3d;
+          margin: 100px auto;
+          cursor: pointer;
+          /* transition: transform 0.6s; */
+          transform: translateZ(-11rem);
+        }
+
+        .toy-box-face {
+          position: absolute;
+          width: 12rem;
+          height: 8rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1.25px;
+          box-sizing: border-box;
+          background-color: #7d4d25;
+          color: #333;
+          border: 0.075rem solid #7d4d25;
+          font-size: 0.8rem;
+          font-weight: bold;
+          text-align: center; 
+        }
+
         .cube-container:hover {
             transform: rotateX(15deg) rotateY(15deg);
         }
@@ -473,6 +501,10 @@ iframe {
         /* Front face */
         .front {
             transform: translateZ(1.0625rem);
+        }
+
+        .toy-box-front {
+          transform: rotateX(0deg) rotateY(96deg) rotateZ(-2deg) translateX(20rem) translateY(0rem) translateZ(1rem); 
         }
 
         
