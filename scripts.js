@@ -197,4 +197,8 @@ document.querySelector('.letter').addEventListener('click', () => {
         });
 
 
+// const rose = document.querySelector(".rose-frame");
 
+// rose.addEventListener("click", (event) => {
+//     rose.style.transform = "rotateY(90deg)";
+// });

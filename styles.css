@@ -424,6 +424,11 @@ iframe {
             float: left;
         }
 
+.television__foot--right {
+  transform: rotate(-30deg);
+  float: right;
+}
+
         .television__foot--right {
             transform: rotate(-30deg);
             float: right;
