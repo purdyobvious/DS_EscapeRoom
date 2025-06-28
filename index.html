@@ -49,7 +49,66 @@
     ></a>
 
     <div class="scene">
-      <div class="frontWall"></div>
+      <div class="back-door">
+        <div class="door">
+          <div class="door-front">
+            <a class="button" href="#popup1">
+
+              <div class="knob"></div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div id="popup1" class="overlay">
+	      <div class="popup">
+          <form action="">
+            <input type="text" 
+            id="solution" 
+            name="solution" 
+            minlength="6" 
+            maxlength="6" 
+            required  
+            pattern="^123456$">
+            <div class="keypad">
+              <div class="row top-row">
+                <div class="key">7</div>
+                <div class="key">8</div>
+                <div class="key">9</div>
+              </div>
+              <div class="row second-row">
+                <div class="key">4</div>
+                <div class="key">5</div>
+                <div class="key">6</div>
+              </div>
+              <div class="row third-row">
+                <div class="key">1</div>
+                <div class="key">2</div>
+                <div class="key">3</div>
+              </div>
+            </div>
+            <input type="submit" class="submit-button" value="Get me out of here!">
+                    </form>
+		      <!-- <h2>Here I am</h2> -->
+		      <a class="close" href="#">&times;</a>
+		      <!-- <div class="content">
+			      Some text
+		      </div> -->
+
+	      </div>
+      </div>
+      <div class="front-door">
+        <div class="door">
+          <div class="door-front">
+            <div class="knob"></div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="frontWall">
+        
+      </div>
+      
       <div class="books">
       <div class="bookshelf">
         <div class="book">
@@ -214,6 +273,7 @@
         </div>
       </div>
     </div>
+    
       <div class="rose-number">8</div>
       <div class="rose-frame">
         <div class="rose-container">
@@ -238,6 +298,7 @@
           </div>
         </div>
       </div>
+      
       <div class="leftWall">
         <iframe id="Maze-frame" src="https://tristanedu.github.io/Maze/" frameborder="0"></iframe>
       </div>
