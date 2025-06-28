@@ -1115,3 +1115,9 @@ iframe {
   transform: rotate(180deg);
   left: 45px;
 }
+
+#Maze-frame {
+  transform: rotateY(180deg);
+  border: none;
+  border-radius: 0;
+}
