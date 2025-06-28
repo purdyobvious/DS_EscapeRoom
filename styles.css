@@ -213,6 +213,7 @@ body {
   background: rgba(197, 22, 22, 0.8);
   color: white;
 }
+
 iframe {
   box-sizing: border-box;
   width: 100%;
@@ -446,35 +447,61 @@ iframe {
 }
 
 .toy-box {
-  width: 12rem;
-  height: 8rem;
-  position: relative;
+  width: 100px;
+  height: 100px;
+  position: absolute;
   transform-style: preserve-3d;
-  margin: 100px auto;
-  cursor: pointer;
-  /* transition: transform 0.6s; */
-  transform: translateZ(-11rem);
 }
 
 .toy-box-face {
-  position: absolute;
-  width: 12rem;
-  height: 8rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25px;
-  box-sizing: border-box;
-  background-color: #7d4d25;
-  color: #333;
-  border: 0.075rem solid #7d4d25;
-  font-size: 0.8rem;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(3, 3, 3);
+  line-height: 200px;
+  font-size: 40px;
   font-weight: bold;
-  text-align: center; 
+  color: white;
+  text-align: center;
+  background: rgb(185, 64, 28);
 }
 
-.cube-container:hover {
-  transform: rotateX(15deg) rotateY(15deg);
+.toy-box-front {
+  width: 100px;
+  height: 100px;
+  top: -2rem;
+  transform: rotateX(0deg) rotateY(0) rotateZ(0deg) translateX(-25px) translateY(88px) translateZ(279px);
+}
+.toy-box-back {
+  width: 100px;
+  height: 100px;
+  top: -16rem;
+  transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(-25px) translateY(208px) translateZ(176px);
+}
+.toy-box-right {
+  width: 100px;
+  height: 100px;
+  top: -28rem;
+  transform: rotateY(90deg) translateX(-226px) translateY(297px) translateZ(26px);
+}
+.toy-box-left {
+  width: 100px;
+  height: 100px;
+  top: -6em;
+  transform:  rotateY(-90deg) translateX(227px) translateY(-16px) translateZ(76px);
+}
+.toy-box-top {
+  width: 100px;
+  height: 100px;
+  top: -7em;
+  transform: rotateX(90deg) translateX(-25px) translateY(228px) translateZ(132px);
+}
+.toy-box-bottom {
+  width: 100px;
+  height: 100px;
+  top: -14em;
+  transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg)translateX(-25px) translateY(-228px) translateZ(147px);
 }
 
 .cube-face {
@@ -499,12 +526,6 @@ iframe {
 .front {
     transform: translateZ(1.0625rem);
 }
-
-.toy-box-front {
-  transform: rotateX(0deg) rotateY(96deg) rotateZ(-2deg) translateX(20rem) translateY(0rem) translateZ(1rem); 
-}
-
-
 
 /* Back face */
 .back {
