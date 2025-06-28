@@ -785,7 +785,7 @@ iframe {
 }
 
 .cuboid .front:hover {
-  transform: rotateY(90deg) translateY(40px);
+  transform: rotateY(-90deg) translateY(40px);
 }
 
 .cuboid .back {
@@ -1222,6 +1222,7 @@ iframe {
   position: absolute;
   margin: 0 auto;
   width: 600px;
+  height: 2px;
   transform-style: preserve-3d;
   /* transform: rotateY(-90deg); */
 }
