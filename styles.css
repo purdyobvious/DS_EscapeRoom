@@ -36,7 +36,7 @@ body {
   font-size: 40px;
   perspective: 10em;
   perspective-origin: 43% calc(14% - 3em);
-  transform: rotateX(0deg) translate(10px, 400px);
+  transform: rotateX(0deg) translate(20px, 500px);
   overflow: hidden;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -187,9 +187,9 @@ body {
 
 #controls {
   position: fixed;
-  bottom: 950px;
+  bottom: 650px;
   left: 94%;
-  transform: translateX(-60%);
+  transform: translateX(-50%);
   z-index: 100;
 }
 
@@ -584,13 +584,7 @@ iframe {
   height: auto;
   perspective: 1200px;
   transform-style: preserve-3d;
-  transform: rotateX(-90deg) translateY(-60px) translateX(40%);
-}
-
-@keyframes wiggle {
-  50% {
-    transform: rotate(3deg);
-  }
+  transform: rotateX(-90deg) translateY(-40px) translateX(45%);
 }
 
 .plane {
@@ -602,9 +596,9 @@ iframe {
 }
 
 .cuboid {
-  --width: 50px;
-  --height: 50px;
-  --depth: 50px;
+  --width: 30px;
+  --height: 30px;
+  --depth: 30px;
 
   width: var(--width);
   height: var(--height);
@@ -708,8 +702,8 @@ iframe {
 }
 
 .plant .leaf {
-  width: 6vmin;
-  height: 14vmin;
+  width: 2vmin;
+  height: 5vmin;
   background: linear-gradient(
     to right,
     rgb(1, 39, 1) 0%,
@@ -721,67 +715,65 @@ iframe {
   border-bottom-right-radius: 30%;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  animation: wiggle 20s infinite alternate;
 }
 
 .plant .leaf-one {
   position: absolute;
   outline: 1px solid darkgreen;
-
-  transform: rotateX(70deg) translateZ(-8vmin);
+  transform: rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-two {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(40deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(40deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-three {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(80deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(80deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-four {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(120deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(120deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-five {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(160deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(160deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-six {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(200deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(200deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-seven {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(240deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(240deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-eight {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(280deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(280deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .leaf-nine {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(320deg) rotateX(70deg) translateZ(-8vmin);
+  transform: rotateY(320deg) rotateX(70deg) translateZ(-4vmin);
 }
 
 .plant .little-leaf {
-  width: 3vmin;
-  height: 10vmin;
+  width: 1.5vmin;
+  height: 4vmin;
   background: linear-gradient(
     to right,
     rgb(1, 39, 1) 0%,
@@ -793,37 +785,36 @@ iframe {
   border-bottom-right-radius: 30%;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  animation: wiggle 20s 1s infinite alternate;
 }
 
 .plant .little-leaf-one {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateX(60deg) translateZ(-4vmin);
+  transform: rotateX(60deg) translateZ(-3vmin);
 }
 
 .plant .little-leaf-two {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(72deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(72deg) rotateX(60deg) translateZ(-3vmin);
 }
 
 .plant .little-leaf-three {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(144deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(144deg) rotateX(60deg) translateZ(-3vmin);
 }
 
 .plant .little-leaf-four {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(216deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(216deg) rotateX(60deg) translateZ(-3vmin);
 }
 
 .plant .little-leaf-five {
   position: absolute;
   outline: 1px solid darkgreen;
-  transform: rotateY(288deg) rotateX(60deg) translateZ(-4vmin);
+  transform: rotateY(288deg) rotateX(60deg) translateZ(-3vmin);
 }
 
 .sidewalk {
@@ -935,157 +926,6 @@ iframe {
   margin: 5px 0;
 }
 
-.rose-frame {
-  display: flex;
-  position: relative;
-  gap: 20px;
-  width: 100px;
-  height: 180px;
-  background-color: lightgray;
-  border: 20px inset black;
-  top: 40%;
-  left: 50px;
-}
-
-.rose-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  /* padding-left: 20px; */
-  width: 100px;
-  height: 100px;
-  /* position: absolute; */
-  background-color: lightgray;
-  margin-bottom: 10px;
-  scale: 0.5;
-}
-
-.rose-container div {
-  position: absolute;
-}
-
-.rose-container .rose-petals > div {
-  background: #d52d58;
-  width: 45px;
-  height: 80px;
-  position: absolute;
-}
-
-.rose-container .rose-petals > div:nth-child(1) {
-  border-radius: 15px;
-  left: 20px;
-  top: -6px;
-  background: #d52d58;
-}
-.rose-container .rose-petals > div:nth-child(2),
-.rose-container .rose-petals > div:nth-child(4),
-.rose-container .rose-petals > div:nth-child(6) {
-  border-radius: 0px 30px 0px 30px;
-  background: #b81b43;
-  left: 0;
-  transform-origin: bottom right;
-}
-.rose-container .rose-petals > div:nth-child(3),
-.rose-container .rose-petals > div:nth-child(5),
-.rose-container .rose-petals > div:nth-child(7) {
-  border-radius: 30px 0px 30px 0px;
-  left: 40px;
-  transform-origin: bottom left;
-}
-
-.rose-container .rose-petals > div:nth-child(4) {
-  z-index: 3;
-  background: #b81b43;
-  top: 5px;
-  height: 75px;
-  transform: rotate(-30deg);
-}
-.rose-container .rose-petals > div:nth-child(5) {
-  transform: rotate(30deg);
-  z-index: 2;
-  background: #b81b43;
-  top: 5px;
-  height: 75px;
-}
-.rose-container .rose-petals > div:nth-child(6) {
-  z-index: 1;
-  background: #c9204b;
-  top: "";
-  height: "";
-}
-.rose-container .rose-petals > div:nth-child(7) {
-  z-index: 0;
-  background: #c9204b;
-  top: "";
-  height: "";
-}
-.rose-container .rose-leaves > div:nth-last-child(1) {
-  width: 55px;
-  height: 30px;
-  background: #338f37;
-  position: absolute;
-  top: 60px;
-  left: 15px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-}
-.rose-container .rose-leaves > div:nth-child(1) {
-  width: 6px;
-  height: 230px;
-  border: none;
-  top: 80px;
-  background: #066406;
-  left: 40px;
-}
-.rose-container .thorns > div {
-  width: 30px;
-  height: 30px;
-  background: #066406;
-  top: 100px;
-  left: 10px;
-}
-.rose-container .thorns > div:after {
-  width: 41px;
-  height: 31px;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  background: lightgray;
-  content: "";
-  position: absolute;
-  left: -12px;
-  top: 17px;
-}
-.rose-container .thorns > div:before {
-  width: 41px;
-  height: 31px;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  background: lightgray;
-  content: "";
-  position: absolute;
-  left: -11px;
-  top: -11px;
-  z-index: 0;
-}
-.rose-container .thorns > div:nth-child(2) {
-  top: 150px;
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  left: 45px;
-}
-.rose-container .thorns > div:nth-child(3) {
-  top: 180px;
-}
-.rose-container .thorns > div:nth-child(4) {
-  top: 220px;
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  left: 45px;
+#maze-wall {
+  transform: rotateY(180deg);
 }
