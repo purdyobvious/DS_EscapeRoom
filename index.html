@@ -17,6 +17,8 @@
         <p>S/↓ - Move Back</p>
         <p>D/→ - Turn Right</p>
         <p>X/● - Stop</p>
+        <p>⤒/PageUp - Look Up</p>
+        <p>⤓/PageDown - Look Down</p>
     </div>
 
     <a
@@ -516,7 +518,20 @@
         <button data-move="turnRight" aria-label="Turn Right">▶</button>
       </div>
   <button data-move="moveBack" aria-label="Move Back">▼</button>
+  <!-- Add this inside your #controls div -->
+<!-- <label for="perspectiveSlider" style="color:white; font-size:14px;">View Height</label>
+<input
+  type="range"
+  id="perspectiveSlider"
+  min="250"
+  max="800"
+  value="400"
+  style="writing-mode: bt-lr; -webkit-appearance: slider-vertical; width: 30px; height: 120px;"
+/> -->
+<button id="lookDownBtn" style="font-size:18px;" aria-label="Look Down">⤒ Look Up</button>
+<button id="lookUpBtn" style="font-size:18px;" aria-label="Look Up">⤓ Look Down</button>
 </div>
+
         
 
     <script src="styles.js"></script>
