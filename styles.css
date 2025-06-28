@@ -808,7 +808,7 @@ iframe {
 }
 
 .cuboid .front:hover {
-  transform: rotateY(90deg) translateY(40px);
+  transform: rotateY(-90deg) translateY(40px);
 }
 
 .cuboid .back {
@@ -1245,6 +1245,7 @@ iframe {
   position: absolute;
   margin: 0 auto;
   width: 600px;
+  height: 2px;
   transform-style: preserve-3d;
   /* transform: rotateY(-90deg); */
 }
@@ -1688,7 +1689,7 @@ iframe {
   align-items: center;
   gap: 10px;
   /* top: 100px; */
-  background: #fff;
+  background: #524b4b;
   border-radius: 5px;
   width: 150px;
   height: 200px;
@@ -1696,35 +1697,39 @@ iframe {
   /* transition: all 5s ease-in-out; */
 }
 
+.popup form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .popup h2 {
   font-size: 15px;
   margin-top: 0;
-  color: #333;
+  color: pink;
+  text-align: center;
   font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
   position: absolute;
   height: 10px;
   width: 10px;
+  scale: 1.5;
   top: 10px;
   right: 10px;
   transition: all 200ms;
   font-size: 10px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #e90d0d;
 }
 
 #solution {
-  /* position: relative;
-  left: 20px;
-  top: 10px; */
   width: 120px;
 }
 
 .submit-button {
-  /* position: relative;
-  left: 10px; */
   padding: 5px;
   background-color: red;
 }
@@ -1734,10 +1739,6 @@ iframe {
 }
 
 .popup .keypad {
-  /* position: relative; */
-  /* top: 10px; */
-  /* left: 10px; */
-  /* margin: 10px; */
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -1777,31 +1778,6 @@ iframe {
   /* overflow: auto; */
   font-size: 10px;
 }
-
-/* .back-door .knob:before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background-color: #f1c83c;
-  width: 18px;
-  height: 18px;
-  left: -1px;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.back-door .knob:after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 7px;
-  background-color: #333;
-  top: 20px;
-  left: 8.5px;
-} */
-
-/* .back-door .door:hover .door-front {
-  transform: rotateY(-130deg);
-} */
 
 .front-door {
   position: absolute;
