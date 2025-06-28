@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escape Room</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js" defer></script>
+    <!-- <script src="scripts.js" defer></script> -->
+     <script src="NewScripts.js" defer></script>
     </head>
     <body>
     <div class="instructions">
@@ -399,12 +400,12 @@
     </div>
     </div>
     </div>
-    <div id="controls">
+    <!-- <div id="controls">
         <div class="flex-grid">
             <div class="col"></div>
             <div class="col">
                 <label for="moveForward">
-                    <a href="#moveForward">▲</a>
+                    <button class="moveForward" data-move="moveForward" aria-label="Move Forward">▲</button>
                 </label>
             </div>
             <div class="col"></div>
@@ -412,17 +413,17 @@
         <div class="flex-grid">
             <div class="col">
                 <label for="turnLeft">
-                    <a href="#turnLeft">◄</a>
+                    <button class="turnLeft" data-move="turnLeft" aria-label="Turn Left">◄</button>
                 </label>
             </div>
             <div class="col">
                 <label for="stop">
-                    <a href="#stop">■</a>
+                    <button class="stop" data-move="stop" aria-label="Stop">■</button>
                 </label>
             </div>
             <div class="col">
                 <label for="turnRight">
-                    <a href="#turnRight">►</a>
+                    <button class="turnRight" data-move="turnRight" aria-label="Turn Left">►</button>
                 </label>
             </div>
         </div>
@@ -430,12 +431,23 @@
             <div class="col"></div>
             <div class="col">
                 <label for="moveBack">
-                    <a href="#moveBack">▼</a>
+                    <button class="moveBack" data-move="moveBack" aria-label="Move Back">▼</button>
                 </label>
             </div>
             <div class="col"></div>
         </div>
-    </div>
+    </div> -->
+
+    <div id="controls">
+      <button data-move="moveForward" aria-label="Move Forward">▲</button>
+      <div class="center-row">
+
+        <button data-move="turnLeft" aria-label="Turn Left">◀</button>
+        <button data-move="stop" aria-label="Stop">●</button>
+        <button data-move="turnRight" aria-label="Turn Right">▶</button>
+      </div>
+  <button data-move="moveBack" aria-label="Move Back">▼</button>
+</div>
         
 
     <script src="styles.js"></script>

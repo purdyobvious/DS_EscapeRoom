@@ -1,6 +1,10 @@
 // 3D Room Scene Navigation Script
 // This script handles keyboard navigation and additional interactive features
 
+window.addEventListener("load", () => {
+  window.focus();
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const scene = document.querySelector(".scene");
   const controls = {
@@ -11,36 +15,66 @@ document.addEventListener("DOMContentLoaded", function () {
     moveBack: document.getElementById("moveBack"),
   };
 
-  // Keyboard navigation
   document.addEventListener("keydown", function (event) {
     switch (event.key.toLowerCase()) {
       case "w":
       case "arrowup":
-        controls.moveForward.checked = true;
+        if (controls.moveForward) controls.moveForward.checked = true;
         event.preventDefault();
         break;
       case "a":
       case "arrowleft":
-        controls.turnLeft.checked = true;
+        if (controls.turnLeft) controls.turnLeft.checked = true;
         event.preventDefault();
         break;
       case "s":
       case "arrowdown":
-        controls.moveBack.checked = true;
+        if (controls.moveBack) controls.moveBack.checked = true;
         event.preventDefault();
         break;
       case "d":
       case "arrowright":
-        controls.turnRight.checked = true;
+        if (controls.turnRight) controls.turnRight.checked = true;
         event.preventDefault();
         break;
       case " ":
       case "escape":
-        controls.stop.checked = true;
+        if (controls.stop) controls.stop.checked = true;
         event.preventDefault();
+        break;
+      case "i":
+        debugMode = !debugMode;
+        instructions.style.display = debugMode ? "block" : "none";
         break;
     }
   });
+
+  document.addEventListener("keyup", function (event) {
+    switch (event.key.toLowerCase()) {
+      case "w":
+      case "arrowup":
+        if (controls.moveForward) controls.moveForward.checked = false;
+        break;
+      case "a":
+      case "arrowleft":
+        if (controls.turnLeft) controls.turnLeft.checked = false;
+        break;
+      case "s":
+      case "arrowdown":
+        if (controls.moveBack) controls.moveBack.checked = false;
+        break;
+      case "d":
+      case "arrowright":
+        if (controls.turnRight) controls.turnRight.checked = false;
+        break;
+      case " ":
+      case "escape":
+        if (controls.stop) controls.stop.checked = false;
+        break;
+    }
+  });
+});
+
 
   // Auto-stop after movement delay (optional feature)
   let movementTimer;
@@ -141,13 +175,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Debug mode (press 'i' to toggle instructions visibility)
   let debugMode = false;
   const instructions = document.querySelector(".instructions");
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key.toLowerCase() === "i") {
-      debugMode = !debugMode;
-      instructions.style.display = debugMode ? "block" : "none";
-    }
-  });
 
   // Add CSS for active control feedback
   const style = document.createElement("style");

@@ -144,24 +144,21 @@ body {
   animation-play-state: paused, paused, paused, paused;
 }
 
-:target.turnLeft ~ .scene,
-#turnLeft:focus ~ .scene {
-  animation-play-state: running, paused, paused, paused;
+.scene.moveForward {
+  animation-play-state: paused, paused, running, paused;
 }
-
-:target.turnRight ~ .scene,
-#turnRight:focus ~ .scene {
-  animation-play-state: paused, running, paused, paused;
-}
-
-:target.moveBack ~ .scene,
-#moveBack:focus ~ .scene {
+.scene.moveBack {
   animation-play-state: paused, paused, paused, running;
 }
-
-:target.moveForward ~ .scene,
-#moveForward:focus ~ .scene {
-  animation-play-state: paused, paused, running, paused;
+.scene.turnLeft {
+  animation-play-state: running, paused, paused, paused;
+}
+.scene.turnRight {
+  animation-play-state: paused, running, paused, paused;
+}
+.scene.stop,
+.scene:not(.moveForward):not(.moveBack):not(.turnLeft):not(.turnRight) {
+  animation-play-state: paused, paused, paused, paused;
 }
 
 #moveForward,
@@ -194,9 +191,35 @@ body {
   left: 94%;
   transform: translateX(-60%);
   z-index: 100;
+  display: flex;
+  flex-direction: column;
 }
 
-#controls a:link,
+.center-row {
+  display: flex;
+}
+
+#controls button {
+  text-decoration: none;
+  color: rgb(197, 22, 22);
+  text-shadow: 2px 2px #000;
+  font-size: 24px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#controls button:hover,
+#controls button:focus {
+  background: rgba(197, 22, 22, 0.8);
+  color: white;
+}
+
+/* #controls a:link,
 #controls a:visited {
   text-decoration: none;
   color: rgb(197, 22, 22);
@@ -215,7 +238,8 @@ body {
 #controls a:focus {
   background: rgba(197, 22, 22, 0.8);
   color: white;
-}
+} */
+
 iframe {
   box-sizing: border-box;
   width: 100%;
