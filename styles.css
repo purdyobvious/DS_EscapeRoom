@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 :root {
   --turnSpeed: 40s;
   --speed: 300s;
@@ -1115,7 +1117,6 @@ iframe {
   transform: rotate(180deg);
   left: 45px;
 }
-@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 .books {
   position: absolute;
@@ -1188,7 +1189,7 @@ iframe {
   position: absolute;
   /* color: goldenrod; */
   bottom: 0px;
-  left: 0%; /* no idea why 20% centers it */
+  left: 0%;
   font-size: 10px;
 }
 
