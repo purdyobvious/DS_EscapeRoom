@@ -930,7 +930,25 @@ iframe {
   background-color: grey;
   transform-style: preserve-3d;
   transform: translate(-48%, -133%) rotateX(90deg) translateY(40rem)
-    translateZ(-2em);
+    translateZ(2.8em);
+}
+
+.welcomeMat {
+  width: 13rem;
+  height: 8rem;
+  transform-style: preserve-3d;
+  transform: translate(-48%, -133%) rotateX(90deg) translateY(30rem)
+  translateZ(7em); 
+  background-color: rgb(131 88 23);
+  
+}
+
+.welcomeMat p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
 }
 
 .treeContainer {
@@ -988,27 +1006,27 @@ iframe {
 
 /* Tree positioning along the sidewalk */
 .tree-left-1 {
-  transform: translateZ(14em) translateX(-5em) translateY(-20em);
+  transform: translateZ(14em) translateX(-5em) translateY(-25em);
 }
 
 .tree-left-2 {
-  transform: translateZ(18em) translateX(-5em) translateY(-20em);
+  transform: translateZ(18em) translateX(-5em) translateY(-25em);
 }
 
 .tree-left-3 {
-  transform: translateZ(21em) translateX(-5em) translateY(-20em);
+  transform: translateZ(21em) translateX(-5em) translateY(-25em);
 }
 
 .tree-right-1 {
-  transform: translateZ(14em) translateX(5em) translateY(-20em);
+  transform: translateZ(14em) translateX(5em) translateY(-25em);
 }
 
 .tree-right-2 {
-  transform: translateZ(18em) translateX(5em) translateY(-20em);
+  transform: translateZ(18em) translateX(5em) translateY(-25em);
 }
 
 .tree-right-3 {
-  transform: translateZ(21em) translateX(5em) translateY(-20em);
+  transform: translateZ(21em) translateX(5em) translateY(-25em);
 }
 
 .instructions {
