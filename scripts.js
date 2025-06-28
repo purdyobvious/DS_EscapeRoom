@@ -215,6 +215,11 @@ const cubeContainer = document.querySelector(".cube-container");
 cubeContainer.addEventListener("click", function () {
   this.classList.toggle("clicked");
 });
+const toyBoxWall = document.querySelector(".toy-box-left");
+//toy-box-left.clicked event listener {
+toyBoxWall.addEventListener("click", function () {
+  this.classList.toggle("clicked");
+});
 
 // Remove the clicked class after animation completes
 cubeContainer.addEventListener("animationend", function () {
