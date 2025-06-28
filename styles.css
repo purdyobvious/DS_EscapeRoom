@@ -436,24 +436,14 @@ iframe {
   float: right;
 }
 
-.cube-container {
-    width: 2.125rem;
-    height: 2.125rem;
-    position: relative;
-    transform-style: preserve-3d;
-    top: 1rem;
-    left: -29rem;
-    margin: 100px auto;
-    cursor: pointer;
-    transition: transform 0.6s;
-    transform: translateZ(-11rem);
-}
-
 .toy-box {
   width: 100px;
   height: 100px;
+  top: 0rem;
+  left: 18rem;
   position: absolute;
   transform-style: preserve-3d;
+  transform: translateZ(7rem);
 }
 
 .toy-box-face {
@@ -462,20 +452,21 @@ iframe {
   width: 100px;
   height: 100px;
   border: 2px solid rgb(3, 3, 3);
-  line-height: 200px;
+  line-height: 80px;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: normal;
   color: white;
   text-align: center;
-  background: rgb(185, 64, 28);
+  background: rgb(208, 20, 183);
 }
 
 .toy-box-front {
   width: 100px;
   height: 100px;
   top: -2rem;
-  transform: rotateX(0deg) rotateY(0) rotateZ(0deg) translateX(-25px) translateY(88px) translateZ(279px);
+  transform: rotateX(0deg) rotateY(0) rotateZ(0deg) translateX(-24px) translateY(88px) translateZ(279px);
 }
+
 .toy-box-back {
   width: 100px;
   height: 100px;
@@ -491,20 +482,53 @@ iframe {
 .toy-box-left {
   width: 100px;
   height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   top: -6em;
   transform:  rotateY(-90deg) translateX(227px) translateY(-16px) translateZ(76px);
 }
+
+.toy-box-left p  {
+  font-size: 30px;
+}
+
+.toy-box-left.clicked {
+  width: 50px;
+  transform: rotateY(-90deg) translateX(253px) translateY(-19px) translateZ(74px);
+}
+
+.toy-box-left.clicked p {
+  font-size: 15px;
+}
+
+
 .toy-box-top {
   width: 100px;
   height: 100px;
+  background-color: #000;
   top: -7em;
-  transform: rotateX(90deg) translateX(-25px) translateY(228px) translateZ(132px);
+  transform: rotateX(90deg) translateX(-25px) translateY(227px) translateZ(132px);
 }
+
 .toy-box-bottom {
   width: 100px;
   height: 100px;
+  background-color: #000;
   top: -14em;
-  transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg)translateX(-25px) translateY(-228px) translateZ(147px);
+  transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg)translateX(-25px) translateY(-228px) translateZ(143px);
+}
+
+.cube-container {
+  width: 2.125rem;
+  height: 2.125rem;
+  position: relative;
+  transform-style: preserve-3d;
+  top: -1rem;
+  left: 9rem;
+  margin: 100px auto;
+  cursor: pointer;
+  transform: translateZ(20rem);
 }
 
 .cube-face {
