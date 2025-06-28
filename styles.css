@@ -1461,3 +1461,9 @@ iframe {
     transform: translateZ(700px);
   }
 }
+
+#Maze-frame {
+  transform: rotateY(180deg);
+  border: none;
+  border-radius: 0;
+}
