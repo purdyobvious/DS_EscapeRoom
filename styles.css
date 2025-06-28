@@ -465,6 +465,7 @@ iframe {
   top: 0rem;
   left: 18rem;
   position: absolute;
+  cursor: pointer;
   transform-style: preserve-3d;
   transform: translateZ(7rem);
 }
@@ -705,6 +706,7 @@ iframe {
   justify-content: center;
   width: 100%;
   height: auto;
+  cursor: pointer;
   perspective: 1200px;
   transform-style: preserve-3d;
   transform: rotateX(-90deg) translateY(-60px) translateX(40%);
@@ -1076,6 +1078,7 @@ iframe {
   gap: 20px;
   width: 100px;
   height: 180px;
+  cursor: pointer;
   background-color: lightgray;
   border: 20px inset black;
   transform-origin: left;
@@ -1256,8 +1259,9 @@ iframe {
   justify-content: center;
   gap: 5px;
   /* transform-style: preserve-3d; */
-  background-color: #3d1c0b;
+
   transform: translateY(-1200px) translateZ(-398px);
+  background-color: #3d1c0b;
   background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
 }
 
@@ -1589,4 +1593,300 @@ iframe {
   border-radius: 0;
   width: 100%;
   height: 100%;
+}
+
+.back-door {
+  position: absolute;
+  border: 8px solid white;
+  width: 280px;
+  height: 490px;
+  transform: translateY(-330px) translateZ(-399px) translateX(-140px);
+}
+
+.back-door .door {
+  position: absolute;
+  width: 280px;
+  height: 490px;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+}
+
+.back-door .door-front {
+  width: 280px;
+  height: 490px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: 30px 0 50px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background-color: #3d1c0b;
+
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.back-door .door-front:before,
+.back-door .door-front:after {
+  content: "";
+  position: absolute;
+  background-color: #3d1c0b;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  width: 205px;
+  height: 105px;
+  border: 10px ridge #3d1c0b;
+  left: 22.5px;
+}
+
+.back-door .door-front:before {
+  top: 80px;
+}
+
+.back-door .door-front:after {
+  top: 275px;
+}
+.back-door .knob {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  background-position: center;
+  background-size: contain;
+  background-image: url(https://m.media-amazon.com/images/I/61Cicc5LptL._AC_SX679_.jpg);
+  top: 210px;
+  left: 240px;
+  border-radius: 2px;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform-style: preserve-3d; */
+  background: rgba(0, 0, 0, 0);
+  height: 500px;
+  width: 250px;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-350px) translateZ(-380px) translateX(-100px);
+}
+
+#popup1:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  /* margin: 70px auto; */
+  /* padding: 20px; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* top: 100px; */
+  background: #fff;
+  border-radius: 5px;
+  width: 150px;
+  height: 200px;
+  /* position: relative; */
+  /* transition: all 5s ease-in-out; */
+}
+
+.popup h2 {
+  font-size: 15px;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 10px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+#solution {
+  /* position: relative;
+  left: 20px;
+  top: 10px; */
+  width: 120px;
+}
+
+.submit-button {
+  /* position: relative;
+  left: 10px; */
+  padding: 5px;
+  background-color: red;
+}
+
+.submit-button:hover {
+  background-color: pink;
+}
+
+.popup .keypad {
+  /* position: relative; */
+  /* top: 10px; */
+  /* left: 10px; */
+  /* margin: 10px; */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 90px;
+  width: 130px;
+  margin-top: 5px;
+  background-color: gray;
+}
+
+.keypad .row {
+  display: flex;
+  gap: 10px;
+}
+
+.key {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  /* padding-top: 17px; */
+}
+
+.key:hover {
+  border: 1px solid #eeeeee;
+}
+
+.popup .close:hover {
+  color: #06d85f;
+}
+.popup .content {
+  /* overflow: auto; */
+  font-size: 10px;
+}
+
+/* .back-door .knob:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f1c83c;
+  width: 18px;
+  height: 18px;
+  left: -1px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.back-door .knob:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background-color: #333;
+  top: 20px;
+  left: 8.5px;
+} */
+
+/* .back-door .door:hover .door-front {
+  transform: rotateY(-130deg);
+} */
+
+.front-door {
+  position: absolute;
+  border-left: 8px solid white;
+  border-top: 8px solid white;
+  border-right: 8px solid white;
+  width: 280px;
+  height: 490px;
+  transform: translateY(-340px) translateZ(402px) translateX(-145px);
+}
+
+.front-door .door {
+  position: absolute;
+  width: 280px;
+  height: 490px;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+}
+
+.front-door .door-front {
+  width: 280px;
+  height: 490px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: 30px 0 50px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background-color: #3d1c0b;
+
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.front-door .door-front:before,
+.front-door .door-front:after {
+  content: "";
+  position: absolute;
+  background-color: #3d1c0b;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  width: 205px;
+  height: 105px;
+  border: 10px ridge #3d1c0b;
+  left: 22.5px;
+}
+
+.front-door .door-front:before {
+  top: 80px;
+}
+
+.front-door .door-front:after {
+  top: 275px;
+}
+.front-door .knob {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background-color: #eeba0b;
+  top: 222px;
+  left: 245px;
+  border-radius: 2px;
+}
+
+.front-door .knob:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f1c83c;
+  width: 18px;
+  height: 18px;
+  left: -1px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.front-door .knob:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background-color: #333;
+  top: 20px;
+  left: 8.5px;
+}
+
+.front-door .door:hover .door-front {
+  transform: rotateY(-130deg);
 }
