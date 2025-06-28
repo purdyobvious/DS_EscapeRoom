@@ -442,6 +442,7 @@ iframe {
   top: 0rem;
   left: 18rem;
   position: absolute;
+  cursor: pointer;
   transform-style: preserve-3d;
   transform: translateZ(7rem);
 }
@@ -677,6 +678,7 @@ iframe {
   justify-content: center;
   width: 100%;
   height: auto;
+  cursor: pointer;
   perspective: 1200px;
   transform-style: preserve-3d;
   transform: rotateX(-90deg) translateY(-60px) translateX(40%);
@@ -1048,6 +1050,7 @@ iframe {
   gap: 20px;
   width: 100px;
   height: 180px;
+  cursor: pointer;
   background-color: lightgray;
   border: 20px inset black;
   transform-origin: left;
