@@ -231,7 +231,7 @@ iframe {
   width: 225px;
   margin: 0 auto;
   position: relative;
-  transform: rotateX(-273deg) rotateY(88deg) translateZ(385px) translateY(97px);
+  transform: rotateX(270deg) rotateY(90deg) translateZ(399px) translateY(-100px);
   bottom: -160px;
   transform-style: preserve-3d;
   filter: drop-shadow(20px 30px 40px rgba(0, 0, 0, 0.3));
@@ -289,7 +289,7 @@ iframe {
   border-radius: 24px;
   margin: 0 auto;
   padding: 5px 7.5px;
-  transform: translateZ(15px);
+  transform: rotateZ(180deg) translate(0px) translate3d(0px, 4px, 0px);
   transform-style: preserve-3d;
 }
 

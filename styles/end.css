@@ -1,0 +1,51 @@
+body {
+  background: linear-gradient(to bottom, #575757, black);
+  font-family: "Cinzel", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.scroll {
+  background: linear-gradient(to bottom, #fdf6e3, #f8dd99);
+  border: 8px double #8b5e3c;
+  border-radius: 15px;
+  padding: 40px 60px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+}
+
+.scroll h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #3e2b1c;
+}
+
+.scroll p {
+  font-size: 1.1em;
+  color: #5a4532;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.start-button {
+  background: #8b1e1e;
+  color: #fff0e6;
+  padding: 15px 30px;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  background: #a32020;
+}
