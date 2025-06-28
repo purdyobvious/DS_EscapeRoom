@@ -416,20 +416,20 @@ iframe {
   transform: translateZ(5px);
 }
 
-        .television__foot--left {
-            transform: rotate(30deg);
-            float: left;
-        }
+.television__foot--left {
+  transform: rotate(30deg);
+  float: left;
+}
 
 .television__foot--right {
   transform: rotate(-30deg);
   float: right;
 }
 
-        .television__foot--right {
-            transform: rotate(-30deg);
-            float: right;
-        }
+.television__foot--right {
+  transform: rotate(-30deg);
+  float: right;
+}
 
 .television__foot--right {
   transform: rotate(-30deg);
@@ -465,20 +465,23 @@ iframe {
   width: 100px;
   height: 100px;
   top: -2rem;
-  transform: rotateX(0deg) rotateY(0) rotateZ(0deg) translateX(-24px) translateY(88px) translateZ(279px);
+  transform: rotateX(0deg) rotateY(0) rotateZ(0deg) translateX(-24px)
+    translateY(88px) translateZ(279px);
 }
 
 .toy-box-back {
   width: 100px;
   height: 100px;
   top: -16rem;
-  transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(-25px) translateY(208px) translateZ(176px);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(-25px)
+    translateY(208px) translateZ(176px);
 }
 .toy-box-right {
   width: 100px;
   height: 100px;
   top: -28rem;
-  transform: rotateY(90deg) translateX(-226px) translateY(297px) translateZ(26px);
+  transform: rotateY(90deg) translateX(-226px) translateY(297px)
+    translateZ(26px);
 }
 .toy-box-left {
   width: 100px;
@@ -487,29 +490,31 @@ iframe {
   align-items: center;
   justify-content: center;
   top: -6em;
-  transform:  rotateY(-90deg) translateX(227px) translateY(-16px) translateZ(76px);
+  transform: rotateY(-90deg) translateX(227px) translateY(-16px)
+    translateZ(76px);
 }
 
-.toy-box-left p  {
+.toy-box-left p {
   font-size: 30px;
 }
 
 .toy-box-left.clicked {
   width: 50px;
-  transform: rotateY(-90deg) translateX(253px) translateY(-19px) translateZ(74px);
+  transform: rotateY(-90deg) translateX(253px) translateY(-19px)
+    translateZ(74px);
 }
 
 .toy-box-left.clicked p {
   font-size: 15px;
 }
 
-
 .toy-box-top {
   width: 100px;
   height: 100px;
   background-color: #000;
   top: -7em;
-  transform: rotateX(90deg) translateX(-25px) translateY(227px) translateZ(132px);
+  transform: rotateX(90deg) translateX(-25px) translateY(227px)
+    translateZ(132px);
 }
 
 .toy-box-bottom {
@@ -517,7 +522,8 @@ iframe {
   height: 100px;
   background-color: #000;
   top: -14em;
-  transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg)translateX(-25px) translateY(-228px) translateZ(143px);
+  transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translateX(-25px)
+    translateY(-228px) translateZ(143px);
 }
 
 .cube-container {
@@ -549,21 +555,20 @@ iframe {
   text-align: center;
 }
 
-        
 /* Front face */
 .front {
-    transform: translateZ(1.0625rem);
+  transform: translateZ(1.0625rem);
 }
 
 /* Back face */
 .back {
-    transform: translateZ(-1.0625rem) rotateY(180deg);
-    background-color: #e6c200;
+  transform: translateZ(-1.0625rem) rotateY(180deg);
+  background-color: #e6c200;
 }
 /* Right face */
 .right {
-    transform: rotateY(90deg) translateZ(1.0625rem);
-    background-color: #ccad00;
+  transform: rotateY(90deg) translateZ(1.0625rem);
+  background-color: #ccad00;
 }
 
 /* Left face */
@@ -780,7 +785,7 @@ iframe {
 }
 
 .cuboid .front:hover {
-  transform: rotateY(90deg) translateY(40px);
+  transform: rotateY(-90deg) translateY(40px);
 }
 
 .cuboid .back {
@@ -1235,6 +1240,7 @@ iframe {
   position: absolute;
   margin: 0 auto;
   width: 600px;
+  height: 2px;
   transform-style: preserve-3d;
   /* transform: rotateY(-90deg); */
 }
@@ -1676,7 +1682,7 @@ iframe {
   align-items: center;
   gap: 10px;
   /* top: 100px; */
-  background: #fff;
+  background: #524b4b;
   border-radius: 5px;
   width: 150px;
   height: 200px;
@@ -1684,35 +1690,39 @@ iframe {
   /* transition: all 5s ease-in-out; */
 }
 
+.popup form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .popup h2 {
   font-size: 15px;
   margin-top: 0;
-  color: #333;
+  color: pink;
+  text-align: center;
   font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
   position: absolute;
   height: 10px;
   width: 10px;
+  scale: 1.5;
   top: 10px;
   right: 10px;
   transition: all 200ms;
   font-size: 10px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: #e90d0d;
 }
 
 #solution {
-  /* position: relative;
-  left: 20px;
-  top: 10px; */
   width: 120px;
 }
 
 .submit-button {
-  /* position: relative;
-  left: 10px; */
   padding: 5px;
   background-color: red;
 }
@@ -1722,10 +1732,6 @@ iframe {
 }
 
 .popup .keypad {
-  /* position: relative; */
-  /* top: 10px; */
-  /* left: 10px; */
-  /* margin: 10px; */
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -1765,31 +1771,6 @@ iframe {
   /* overflow: auto; */
   font-size: 10px;
 }
-
-/* .back-door .knob:before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background-color: #f1c83c;
-  width: 18px;
-  height: 18px;
-  left: -1px;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.back-door .knob:after {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 7px;
-  background-color: #333;
-  top: 20px;
-  left: 8.5px;
-} */
-
-/* .back-door .door:hover .door-front {
-  transform: rotateY(-130deg);
-} */
 
 .front-door {
   position: absolute;
