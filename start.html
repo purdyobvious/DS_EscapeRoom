@@ -2,33 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mystery Mansion</title>
+    <title>Last Will of Lord Harrington</title>
     <link rel="stylesheet" href="./styles/start.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container">
-      <h1 class="game-title">Find your way out.. If you dare.</h1>
-      <h2 class="game-subtitle">Open the doors to start your adventure!</h2>
-
-      <div class="wrapper">
-        <div id="left-door" class="door">
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div id="left-knob" class="knob"></div>
-        </div>
-        <button class="start-button" onclick="startGame()">Start Game</button>
-        <div id="right-door" class="door">
-          <div class="shape"></div>
-          <div class="shape"></div>
-          <div id="right-knob" class="knob"></div>
-        </div>
-      </div>
+    <div class="scroll">
+      <h1>Last Will and Testament</h1>
+      <p>
+        To whom it may concern,<br /><br />
+        I, Lord Harrington, being of sound mind and questionable spirit, do
+        hereby bequeath unto you a most curious legacy. Should you choose to
+        uncover its secrets, your journey shall begin upon the reading of this
+        document. <br />
+        Your first riddle; I'm not too high, I'm not too flat. Like other in
+        life, I feel stepped on. The answer lies right beneath your feet.
+      </p>
+      <button class="start-button" onclick="startGame()">
+        Begin the Challenge
+      </button>
     </div>
+
     <script>
       function startGame() {
-        alert("Game Starting...");
-        window.location.href = "../index.html";
+        alert(
+          "Follow the clues to uncover the secrets of Lord Harrington's legacy!"
+        );
       }
     </script>
   </body>
