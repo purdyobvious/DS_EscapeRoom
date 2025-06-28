@@ -1533,6 +1533,65 @@ iframe {
   border-radius: 2px;
 }
 
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform-style: preserve-3d; */
+  background: rgba(0, 0, 0, 0);
+  height: 500px;
+  width: 250px;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-350px) translateZ(-200px) translateX(-100px);
+}
+
+#popup1:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  /* margin: 70px auto; */
+  /* padding: 20px; */
+  position: relative;
+  /* top: 100px; */
+  background: #fff;
+  border-radius: 5px;
+  width: 150px;
+  height: 200px;
+  /* position: relative; */
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  font-size: 15px;
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06d85f;
+}
+.popup .content {
+  /* overflow: auto; */
+  font-size: 10px;
+}
+
 /* .back-door .knob:before {
   content: "";
   position: absolute;
