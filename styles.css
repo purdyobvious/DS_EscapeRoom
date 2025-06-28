@@ -1136,8 +1136,9 @@ iframe {
   justify-content: center;
   gap: 5px;
   /* transform-style: preserve-3d; */
-  background-color: #3d1c0b;
+
   transform: translateY(-1200px) translateZ(-398px);
+  background-color: #3d1c0b;
   background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
 }
 
@@ -1469,58 +1470,68 @@ iframe {
   border-radius: 0;
 }
 
-/* .back-door {
+.back-door {
   position: absolute;
-} */
+  border: 8px solid white;
+  width: 280px;
+  height: 490px;
+  transform: translateY(-330px) translateZ(-399px) translateX(-140px);
+}
 
-/* .back-door .door {
+.back-door .door {
   position: absolute;
-  width: 170px;
-  height: 270px;
+  width: 280px;
+  height: 490px;
   cursor: pointer;
+
   transform-style: preserve-3d;
   transform: perspective(2500px);
-} */
+}
 
-/* .back-door .door-front {
-  width: 170px;
-  height: 270px;
+.back-door .door-front {
+  width: 280px;
+  height: 490px;
   overflow: hidden;
   transform-origin: left;
   box-shadow: 30px 0 50px rgba(0, 0, 0, 0.2);
   position: absolute;
-  background-color: #924500;
+  background-color: #3d1c0b;
+
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
   z-index: 1;
   transition: 0.5s;
-} */
+}
 
-/* .back-door .door-front:before,
+.back-door .door-front:before,
 .back-door .door-front:after {
   content: "";
   position: absolute;
-  background-color: #924500;
-  width: 105px;
-  height: 75px;
-  border: 10px ridge #b05500;
+  background-color: #3d1c0b;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  width: 205px;
+  height: 105px;
+  border: 10px ridge #3d1c0b;
   left: 22.5px;
 }
 
 .back-door .door-front:before {
-  top: 25px;
-} */
+  top: 80px;
+}
 
-/* .back-door .door-front:after {
-  top: 155px;
+.back-door .door-front:after {
+  top: 275px;
 }
 .back-door .knob {
   position: absolute;
-  width: 20px;
-  height: 30px;
-  background-color: #eeba0b;
-  top: 122px;
-  left: 145px;
+  width: 30px;
+  height: 50px;
+  background-position: center;
+  background-size: contain;
+  background-image: url(https://m.media-amazon.com/images/I/61Cicc5LptL._AC_SX679_.jpg);
+  top: 210px;
+  left: 240px;
   border-radius: 2px;
-} */
+}
 
 /* .back-door .knob:before {
   content: "";
@@ -1531,9 +1542,97 @@ iframe {
   height: 18px;
   left: -1px;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.back-door .knob:after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background-color: #333;
+  top: 20px;
+  left: 8.5px;
 } */
 
-/* .back-door .knob:after {
+/* .back-door .door:hover .door-front {
+  transform: rotateY(-130deg);
+} */
+
+.front-door {
+  position: absolute;
+  border-left: 8px solid white;
+  border-top: 8px solid white;
+  border-right: 8px solid white;
+  width: 280px;
+  height: 490px;
+  transform: translateY(-340px) translateZ(402px) translateX(-145px);
+}
+
+.front-door .door {
+  position: absolute;
+  width: 280px;
+  height: 490px;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+}
+
+.front-door .door-front {
+  width: 280px;
+  height: 490px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: 30px 0 50px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background-color: #3d1c0b;
+
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.front-door .door-front:before,
+.front-door .door-front:after {
+  content: "";
+  position: absolute;
+  background-color: #3d1c0b;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  width: 205px;
+  height: 105px;
+  border: 10px ridge #3d1c0b;
+  left: 22.5px;
+}
+
+.front-door .door-front:before {
+  top: 80px;
+}
+
+.front-door .door-front:after {
+  top: 275px;
+}
+.front-door .knob {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background-color: #eeba0b;
+  top: 222px;
+  left: 245px;
+  border-radius: 2px;
+}
+
+.front-door .knob:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: #f1c83c;
+  width: 18px;
+  height: 18px;
+  left: -1px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.front-door .knob:after {
   content: "";
   position: absolute;
   width: 4px;
@@ -1543,6 +1642,6 @@ iframe {
   left: 8.5px;
 }
 
-.back-door .door:hover .door-front {
-  transform: rotateY(-160deg);
-} */
+.front-door .door:hover .door-front {
+  transform: rotateY(-130deg);
+}
