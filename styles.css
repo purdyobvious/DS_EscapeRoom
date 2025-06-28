@@ -216,6 +216,7 @@ body {
   background: rgba(197, 22, 22, 0.8);
   color: white;
 }
+
 iframe {
   box-sizing: border-box;
   width: 100%;
@@ -230,7 +231,7 @@ iframe {
   width: 225px;
   margin: 0 auto;
   position: relative;
-  transform: rotateX(-273deg) rotateY(88deg) translateZ(385px) translateY(97px);
+  transform: rotateX(270deg) rotateY(90deg) translateZ(399px) translateY(-100px);
   bottom: -160px;
   transform-style: preserve-3d;
   filter: drop-shadow(20px 30px 40px rgba(0, 0, 0, 0.3));
@@ -288,7 +289,7 @@ iframe {
   border-radius: 24px;
   margin: 0 auto;
   padding: 5px 7.5px;
-  transform: translateZ(15px);
+  transform: rotateZ(180deg) translate(0px) translate3d(0px, 4px, 0px);
   transform-style: preserve-3d;
 }
 
@@ -415,14 +416,108 @@ iframe {
   transform: translateZ(5px);
 }
 
-.television__foot--left {
-  transform: rotate(30deg);
-  float: left;
-}
+        .television__foot--left {
+            transform: rotate(30deg);
+            float: left;
+        }
 
 .television__foot--right {
   transform: rotate(-30deg);
   float: right;
+}
+
+        .television__foot--right {
+            transform: rotate(-30deg);
+            float: right;
+        }
+
+.television__foot--right {
+  transform: rotate(-30deg);
+  float: right;
+}
+
+.toy-box {
+  width: 100px;
+  height: 100px;
+  top: 0rem;
+  left: 18rem;
+  position: absolute;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: translateZ(7rem);
+}
+
+.toy-box-face {
+  display: flex;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(3, 3, 3);
+  line-height: 80px;
+  font-size: 40px;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  background: rgb(208, 20, 183);
+}
+
+.toy-box-front {
+  width: 100px;
+  height: 100px;
+  top: -2rem;
+  transform: rotateX(0deg) rotateY(0) rotateZ(0deg) translateX(-24px) translateY(88px) translateZ(279px);
+}
+
+.toy-box-back {
+  width: 100px;
+  height: 100px;
+  top: -16rem;
+  transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(-25px) translateY(208px) translateZ(176px);
+}
+.toy-box-right {
+  width: 100px;
+  height: 100px;
+  top: -28rem;
+  transform: rotateY(90deg) translateX(-226px) translateY(297px) translateZ(26px);
+}
+.toy-box-left {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: -6em;
+  transform:  rotateY(-90deg) translateX(227px) translateY(-16px) translateZ(76px);
+}
+
+.toy-box-left p  {
+  font-size: 30px;
+}
+
+.toy-box-left.clicked {
+  width: 50px;
+  transform: rotateY(-90deg) translateX(253px) translateY(-19px) translateZ(74px);
+}
+
+.toy-box-left.clicked p {
+  font-size: 15px;
+}
+
+
+.toy-box-top {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  top: -7em;
+  transform: rotateX(90deg) translateX(-25px) translateY(227px) translateZ(132px);
+}
+
+.toy-box-bottom {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  top: -14em;
+  transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg)translateX(-25px) translateY(-228px) translateZ(143px);
 }
 
 .cube-container {
@@ -430,14 +525,11 @@ iframe {
   height: 2.125rem;
   position: relative;
   transform-style: preserve-3d;
-  top: -6rem;
+  top: -1rem;
+  left: 9rem;
   margin: 100px auto;
   cursor: pointer;
-  transition: transform 0.6s;
-}
-
-.cube-container:hover {
-  transform: rotateX(15deg) rotateY(15deg);
+  transform: translateZ(20rem);
 }
 
 .cube-face {
@@ -457,21 +549,21 @@ iframe {
   text-align: center;
 }
 
+        
 /* Front face */
 .front {
-  transform: translateZ(1.0625rem);
+    transform: translateZ(1.0625rem);
 }
 
 /* Back face */
 .back {
-  transform: translateZ(-1.0625rem) rotateY(180deg);
-  background-color: #e6c200;
+    transform: translateZ(-1.0625rem) rotateY(180deg);
+    background-color: #e6c200;
 }
-
 /* Right face */
 .right {
-  transform: rotateY(90deg) translateZ(1.0625rem);
-  background-color: #ccad00;
+    transform: rotateY(90deg) translateZ(1.0625rem);
+    background-color: #ccad00;
 }
 
 /* Left face */
@@ -508,6 +600,7 @@ iframe {
     transform: rotateX(360deg) rotateY(360deg);
   }
 }
+
 .letter {
   width: 3.75rem;
   height: 6.25rem;
@@ -585,6 +678,7 @@ iframe {
   justify-content: center;
   width: 100%;
   height: auto;
+  cursor: pointer;
   perspective: 1200px;
   transform-style: preserve-3d;
   transform: rotateX(-90deg) translateY(-60px) translateX(40%);
@@ -919,7 +1013,7 @@ iframe {
 
 .instructions {
   position: fixed;
-  top: 20px;
+  top: -403px;
   left: 20px;
   color: white;
   background: rgba(0, 0, 0, 0.8);
@@ -956,6 +1050,7 @@ iframe {
   gap: 20px;
   width: 100px;
   height: 180px;
+  cursor: pointer;
   background-color: lightgray;
   border: 20px inset black;
   transform-origin: left;
