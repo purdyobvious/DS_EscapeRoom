@@ -629,7 +629,8 @@ iframe {
   }
 }
 
-.letter {
+.letter,
+.letter2 {
   width: 3.75rem;
   height: 10rem;
   background-color: #fff;
@@ -646,7 +647,8 @@ iframe {
   line-height: 1.2;
 }
 
-.change .letter {
+.change .letter,
+.change .letter2 {
   transform: rotateX(-80deg);
   transition: transform 1s 1s;
 }

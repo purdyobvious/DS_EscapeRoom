@@ -56,8 +56,10 @@ cubeContainer.addEventListener("animationend", function () {
   this.classList.remove("clicked");
 });
 
-document.querySelector(".letter").addEventListener("click", () => {
-  document.body.classList.toggle("change");
+document.querySelectorAll(".letter, .letter2").forEach((el) => {
+  el.addEventListener("click", () => {
+    document.body.classList.toggle("change");
+  });
 });
 
 const roseFrame = document.querySelector(".rose-frame");
