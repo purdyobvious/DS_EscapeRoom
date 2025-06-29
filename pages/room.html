@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="./../styles/styles.css" />
+    <!-- <script src="scripts.js" defer></script> -->
+     <script src="./../scripts.js" defer></script>
+    </head>
+    <body>
+    <div class="instructions">
+        <h3>Navigation Controls</h3>
+        <p>Use arrow keys below or keyboard shortcuts:</p>
+        <p>W/↑ - Move Forward</p>
+        <p>A/← - Turn Left</p>
+        <p>S/↓ - Move Back</p>
+        <p>D/→ - Turn Right</p>
+        <p>X/● - Stop</p>
+        <p>⤒/PageUp - Look Up</p>
+        <p>⤓/PageDown - Look Down</p>
+    </div>
+
+    <a
+      tabindex="1"
+      accesskey="W"
+      href="#moveForward"
+      class="moveForward"
+      id="moveForward"
+    ></a>
+    <a
+      tabindex="2"
+      accesskey="A"
+      class="turnLeft"
+      id="turnLeft"
+      href="#turnLeft"
+    ></a>
+    <a tabindex="5" accesskey="X" class="stop" id="stop" href="#stop"></a>
+    <a
+      tabindex="3"
+      accesskey="D"
+      class="turnRight"
+      id="turnRight"
+      href="#turnRight"
+    ></a>
+    <a
+      tabindex="4"
+      accesskey="S"
+      class="moveBack"
+      id="moveBack"
+      href="#moveBack"
+    ></a>
+
+    <div class="scene">
+      <div class="back-door">
+        <div class="door">
+          <div class="door-front">
+            <a class="button" href="#popup1">
+
+              <div class="knob"></div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+      <div id="popup1" class="overlay">
+	      <div class="popup">
+          <h2>Enter the secret code</h2>
+          <form action="/end.html">
+            <input type="text" 
+            id="solution" 
+            name="solution" 
+            minlength="6" 
+            maxlength="6" 
+            required  
+            pattern="^123456$">
+            <input type="submit" class="submit-button" value="Get me out of here!">
+          </form>
+		      
+		      <a class="close" href="#">&times;</a>
+		      <!-- <div class="content">
+			      Some text
+		      </div> -->
+
+	      </div>
+      </div>
+      <div class="front-door">
+        <div class="door">
+          <div class="door-front">
+            <div class="knob"></div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="frontWall">
+        
+      </div>
+      
+      <div class="books">
+      <div class="bookshelf">
+        <div class="book">
+          <div class="side spine christianity">
+            <div class="spine-title">
+              Mere Christianity
+              <div>C. S. Lewis</div>
+            </div>
+            <span class="spine-author"> </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/71vMNnGyfXL._SY466_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine dare">
+            <span class="spine-title"> The Love Dare</span>
+            <span class="spine-author"> Alex Kendrick </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/91F7KayACJL._SY466_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine mockingbird">
+            <div class="spine-title">
+              To Kill a
+              <p>Mockingbird</p>
+            </div>
+            >
+            <span class="spine-author"> Harper Lee </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/81aY1lxk+9L._SL200_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine rings">
+            <span class="spine-title"> J.R.R. Tolkien </span>
+            <span class="spine-author"> The Lord of the Rings </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/7125+5E40JL._SL200_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine dog">
+            <span class="spine-title"> To Say Nothing of the Dog </span>
+            <span class="spine-author"> Connie Willis </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/71EPUcG0-oL.__AC_SY445_SX342_QL70_FMwebp_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine boom">
+            <div class="spine-title">
+              <div></div>
+              Chicka Chicka Boom Boom
+              <div></div>
+            </div>
+            <span class="spine-author"> Bill Martin Jr. </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/41ELrlwwVVL._SY445_SX342_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine cake">
+            <span class="spine-title"> The Duchess Bakes a Cake </span>
+            <span class="spine-author"> Virginia Kahl </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/61JODcFWpJL._SY425_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+
+        <div class="book">
+          <div class="side spine hobbit">
+            <span class="spine-title"> J.R.R. Tolkien </span>
+            <span class="spine-author"> The Hobbit </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/712cDO7d73L._SY466_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+        <div class="book">
+          <div class="side spine galaxy">
+            <span class="spine-title">
+              The Hitchhiker's Guide to the Galaxy
+            </span>
+            <span class="spine-author"> Douglas Adams </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/71i2fm1QJQL._SY522_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+        <div class="book">
+          <div class="side spine dummies">
+            <span class="spine-title"> Coding for Dummies </span>
+            <span class="spine-author"> Nikhil Abraham </span>
+          </div>
+          <div class="side top"></div>
+          <div
+            class="side cover"
+            style="
+              background-image: url(https://m.media-amazon.com/images/I/81YWUlX6J4L._SY385_.jpg);
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="rose-number">8</div>
+      <div class="rose-frame">
+        <div class="rose-container">
+          <div class="thorns">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="rose-leaves">
+            <div></div>
+            <div></div>
+          </div>
+          <div class="rose-petals">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="leftWall">
+        <iframe id="Maze-frame" src="https://tristanedu.github.io/Maze/" frameborder="0"></iframe>
+      </div>
+        <div class="rightWall"></div>
+        <div class="toy-box">
+          <div class="toy-box-face toy-box-front"></div>
+          <div class="toy-box-face toy-box-back"></div>
+          <div class="toy-box-face toy-box-right"></div>
+          <div class="toy-box-face toy-box-left"><p>TOYS</p></div>
+          <div class="toy-box-face toy-box-top"></div>
+          <div class="toy-box-face toy-box-bottom"></div>
+          <!-- Inner cubes (toys) -->
+        </div>
+        <div class="cube-container">
+            <div class="cube-face front">?</div>
+            <div class="cube-face back">?</div>
+            <div class="cube-face right">?</div>
+            <div class="cube-face left">?</div>
+            <div class="cube-face top">?</div>
+            <div class="cube-face bottom">3</div>
+        </div>
+        <div class="table">
+          <h3 class="letter">Letter text</h3>
+          <div class="table-leg table-leg-1"></div>
+          <div class="table-leg table-leg-2"></div>
+          <div class="table-leg table-leg-3"></div>
+        </div>
+        <div class="floor">
+          <div class="House-plant">
+            <div class="plane">
+              <div class="plant">
+                <div class="leaf leaf-one"></div>
+                <div class="leaf leaf-two"></div>
+                <div class="leaf leaf-three"></div>
+                <div class="leaf leaf-four"></div>
+                <div class="leaf leaf-five"></div>
+                <div class="leaf leaf-six"></div>
+                <div class="leaf leaf-seven"></div>
+                <div class="leaf leaf-eight"></div>
+                <div class="leaf leaf-nine"></div>
+                <div class="little-leaf little-leaf-one"></div>
+                <div class="little-leaf little-leaf-two"></div>
+                <div class="little-leaf little-leaf-three"></div>
+                <div class="little-leaf little-leaf-four"></div>
+                <div class="little-leaf little-leaf-five"></div>
+              </div>
+              <div class="cuboid">
+                <div class="top"></div>
+                <div class="bottom">
+                  <div class="number">5</div>
+                </div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="front"></div>
+                <div class="back"></div>
+              </div>
+            </div>
+          </div>
+        <div class="television">
+          <div class="television__top">
+            <div class="television__antenna television__antenna--left"></div>
+            <div class="television__antenna television__antenna--right"></div>
+            <div class="television__antenna__base"></div>
+          </div>
+          <!-- television__top -->
+          <div class="television__center">
+            <div class="television__screen">
+              <iframe
+                src="https://zoomquilt.org/"
+                frameborder="0"
+                id="tv"
+                name="tv"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+              ></iframe>
+            </div>
+            <!-- television__screen -->
+            <div class="television__channels-wrapper">
+              <ul class="television__channels">
+                <li class="television__channel">
+                  <a
+                    href="https://www.youtube.com/embed/XZg1ZDfYZu8?si=wJhjpdzGA-Wc6Pbi&amp;controls=0""
+                    title="Channel 1"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+  <a
+    href="https://www.youtube.com/embed/XZg1ZDfYZu8?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&playsinline=1"
+    title="Channel 1"
+    target="tv"
+  ></a>
+</li>
+
+                <li class="television__channel">
+                  <a
+                    href="http://www.youtube.com/embed/EGikhmjTSZI"
+                    title="Channel 3"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="https://t3.ftcdn.net/jpg/09/33/16/18/360_F_933161809_eYIPZvNNlXDT9cQEwLGQWKuJ2AQ1QRvV.jpg"
+                    title="Channel 4"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="https://www.youtube.com/embed/VvtPSkStjRE?si=bKpUAlK2z9THawER&amp;controls=0" title="YouTube video player"
+                    title="Channel 5"
+                    target="tv"
+                  ></a>
+                </li>
+                <li class="television__channel">
+                  <a
+                    href="https://www.youtube.com/embed/2xdJyQjR0p0?si=DZkhvwYrDL8rdpWQ&amp;controls=0"
+                    title="Channel 6"
+                    target="tv"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- television__channels-wrapper -->
+          </div>
+          <!-- television__center -->
+          <div class="television__base">
+            <div class="television__foot television__foot--left"></div>
+            <div class="television__foot television__foot--right"></div>
+          </div>
+          <!-- television__base -->
+        </div>
+      </div>
+      <div class="ceiling"></div>
+      <div class="backWall"></div>
+      <div class="welcomeMat"></div>
+        <div class="sidewalk"></div>
+        <div class="treeContainer">
+            <!-- Left side trees -->
+            <div class="tree tree-left-1">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-left-2">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-left-3">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            
+            <!-- Right side trees -->
+            <div class="tree tree-right-1">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-right-2">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+            <div class="tree tree-right-3">
+                <div class="tree-trunk"></div>
+                <div class="tree-foliage"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- <div id="controls">
+        <div class="flex-grid">
+            <div class="col"></div>
+            <div class="col">
+                <label for="moveForward">
+                    <button class="moveForward" data-move="moveForward" aria-label="Move Forward">▲</button>
+                </label>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="flex-grid">
+            <div class="col">
+                <label for="turnLeft">
+                    <button class="turnLeft" data-move="turnLeft" aria-label="Turn Left">◄</button>
+                </label>
+            </div>
+            <div class="col">
+                <label for="stop">
+                    <button class="stop" data-move="stop" aria-label="Stop">■</button>
+                </label>
+            </div>
+            <div class="col">
+                <label for="turnRight">
+                    <button class="turnRight" data-move="turnRight" aria-label="Turn Left">►</button>
+                </label>
+            </div>
+        </div>
+        <div class="flex-grid">
+            <div class="col"></div>
+            <div class="col">
+                <label for="moveBack">
+                    <button class="moveBack" data-move="moveBack" aria-label="Move Back">▼</button>
+                </label>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div> -->
+
+    <div id="controls">
+      <button data-move="moveForward" aria-label="Move Forward">▲</button>
+      <div class="center-row">
+
+        <button data-move="turnLeft" aria-label="Turn Left">◀</button>
+        <button data-move="stop" aria-label="Stop">●</button>
+        <button data-move="turnRight" aria-label="Turn Right">▶</button>
+      </div>
+  <button data-move="moveBack" aria-label="Move Back">▼</button>
+  <!-- Add this inside your #controls div -->
+<!-- <label for="perspectiveSlider" style="color:white; font-size:14px;">View Height</label>
+<input
+  type="range"
+  id="perspectiveSlider"
+  min="250"
+  max="800"
+  value="400"
+  style="writing-mode: bt-lr; -webkit-appearance: slider-vertical; width: 30px; height: 120px;"
+/> -->
+<button id="lookDownBtn" style="font-size:18px;" aria-label="Look Down">⤒ Look Up</button>
+<button id="lookUpBtn" style="font-size:18px;" aria-label="Look Up">⤓ Look Down</button>
+</div>
+
+        
+
+    <!-- <script src="styles.js"></script> -->
+  </body>
+</html>
+
