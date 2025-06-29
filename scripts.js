@@ -195,9 +195,7 @@ toyBoxWall.addEventListener("click", function () {
 });
 
 // Remove the clicked class after animation completes
-cubeContainer.addEventListener("animationend", function () {
-  this.classList.remove("clicked");
-});
+const letterFlip = document.querySelector(".letter");
 
 document.querySelector(".letter").addEventListener("click", () => {
   document.body.classList.toggle("change");
