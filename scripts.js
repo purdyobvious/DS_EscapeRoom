@@ -1,145 +1,7 @@
-// 3D Room Scene Navigation Script
-// This script handles keyboard navigation and additional interactive features
-
 document.addEventListener("DOMContentLoaded", function () {
   const scene = document.querySelector(".scene");
-  const controls = {
-    moveForward: document.getElementById("moveForward"),
-    turnLeft: document.getElementById("turnLeft"),
-    stop: document.getElementById("stop"),
-    turnRight: document.getElementById("turnRight"),
-    moveBack: document.getElementById("moveBack"),
-  };
-
-  // Keyboard navigation
-  document.addEventListener("keydown", function (event) {
-    switch (event.key.toLowerCase()) {
-      case "w":
-      case "arrowup":
-        controls.moveForward.checked = true;
-        event.preventDefault();
-        break;
-      case "a":
-      case "arrowleft":
-        controls.turnLeft.checked = true;
-        event.preventDefault();
-        break;
-      case "s":
-      case "arrowdown":
-        controls.moveBack.checked = true;
-        event.preventDefault();
-        break;
-      case "d":
-      case "arrowright":
-        controls.turnRight.checked = true;
-        event.preventDefault();
-        break;
-      case " ":
-      case "escape":
-        controls.stop.checked = true;
-        event.preventDefault();
-        break;
-    }
-  });
-
-  // Auto-stop after movement delay (optional feature)
-  let movementTimer;
-
-  function startMovementTimer() {
-    clearTimeout(movementTimer);
-    movementTimer = setTimeout(() => {
-      controls.stop.checked = true;
-    }, 5000); // Auto-stop after 5 seconds
-  }
-
-  // Add event listeners to all navigation controls
-  Object.values(controls).forEach((control) => {
-    if (control.id !== "stop") {
-      control.addEventListener("change", function () {
-        if (this.checked) {
-          startMovementTimer();
-        }
-      });
-    }
-  });
-
-  // Add visual feedback for active controls
-  const controlLinks = document.querySelectorAll("#controls a");
-
-  controlLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      // Remove active class from all links
-      controlLinks.forEach((l) => l.classList.remove("active"));
-      // Add active class to clicked link
-      this.classList.add("active");
-
-      // Remove active class after animation
-      setTimeout(() => {
-        this.classList.remove("active");
-      }, 300);
-    });
-  });
-
-  // Add touch/mobile support
-  let touchStartX = 0;
-  let touchStartY = 0;
-  const touchThreshold = 50;
-
-  document.addEventListener("touchstart", function (event) {
-    touchStartX = event.touches[0].clientX;
-    touchStartY = event.touches[0].clientY;
-  });
-
-  document.addEventListener("touchend", function (event) {
-    if (!touchStartX || !touchStartY) return;
-
-    const touchEndX = event.changedTouches[0].clientX;
-    const touchEndY = event.changedTouches[0].clientY;
-
-    const deltaX = touchEndX - touchStartX;
-    const deltaY = touchEndY - touchStartY;
-
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      // Horizontal swipe
-      if (Math.abs(deltaX) > touchThreshold) {
-        if (deltaX > 0) {
-          controls.turnRight.checked = true;
-        } else {
-          controls.turnLeft.checked = true;
-        }
-      }
-    } else {
-      // Vertical swipe
-      if (Math.abs(deltaY) > touchThreshold) {
-        if (deltaY > 0) {
-          controls.moveBack.checked = true;
-        } else {
-          controls.moveForward.checked = true;
-        }
-      }
-    }
-
-    touchStartX = 0;
-    touchStartY = 0;
-  });
-
-  // Performance optimization: pause animations when tab is not visible
-  document.addEventListener("visibilitychange", function () {
-    if (document.hidden) {
-      scene.style.animationPlayState = "paused";
-    } else {
-      // Resume current animation state
-      const checkedControl = document.querySelector(
-        'input[name="nav"]:checked'
-      );
-      if (checkedControl && checkedControl.id !== "stop") {
-        // Animation will resume based on CSS rules
-      }
-    }
-  });
-
-  // Debug mode (press 'i' to toggle instructions visibility)
   let debugMode = false;
+
   const instructions = document.querySelector(".instructions");
 
   document.addEventListener("keydown", function (event) {
@@ -188,11 +50,6 @@ const cubeContainer = document.querySelector(".cube-container");
 cubeContainer.addEventListener("click", function () {
   this.classList.toggle("clicked");
 });
-const toyBoxWall = document.querySelector(".toy-box-left");
-//toy-box-left.clicked event listener {
-toyBoxWall.addEventListener("click", function () {
-  this.classList.toggle("clicked");
-});
 
 // Remove the clicked class after animation completes
 cubeContainer.addEventListener("animationend", function () {
@@ -213,12 +70,99 @@ roseFrame.addEventListener("animationend", function () {
   this.classList.remove("clicked");
 });
 
-// const rose = document.querySelector(".rose-frame");
+let movement = null;
+let movementTimer = null;
+const scene = document.querySelector(".scene");
 
-// rose.addEventListener("click", (event) => {
-//   rose.style.transform = "translateY(-300px) translateX(-300px)";
-// });
+function startMovement(type) {
+  clearTimeout(movementTimer);
+  movement = type;
+  scene.className = "scene " + type;
+  movementTimer = setTimeout(stopMovement, 5000);
+}
 
-// setTimeout(() => {
-//   rose.style.transform = "";
-// }, 5000);
+function stopMovement() {
+  movement = null;
+  scene.className = "scene stop";
+}
+
+document.querySelectorAll("[data-move]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const moveType = btn.getAttribute("data-move");
+    if (moveType === "stop") {
+      stopMovement();
+    } else {
+      startMovement(moveType);
+    }
+  });
+});
+
+window.addEventListener("load", () => {
+  window.focus();
+});
+window.addEventListener("click", () => {
+  window.focus();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "w" || e.key === "ArrowUp") startMovement("moveForward");
+  if (e.key === "a" || e.key === "ArrowLeft") startMovement("turnLeft");
+  if (e.key === "s" || e.key === "ArrowDown") startMovement("moveBack");
+  if (e.key === "d" || e.key === "ArrowRight") startMovement("turnRight");
+  if (e.key === " " || e.key === "Escape") stopMovement();
+
+  if (e.key === "PageUp") {
+    currentPx = Math.max(minPx, currentPx - 20);
+    currentPercent = pxToPercent(currentPx);
+    updateView();
+  }
+  if (e.key === "PageDown") {
+    currentPx = Math.min(maxPx, currentPx + 20);
+    currentPercent = pxToPercent(currentPx);
+    updateView();
+  }
+});
+
+const body = document.body;
+
+// Set your desired min/max for each property
+const minPx = 250;
+const maxPx = 800;
+const defaultPx = 400;
+let currentPx = defaultPx;
+let currentPercent = 14;
+
+function pxToPercent(px) {
+  if (px <= defaultPx) {
+    return ((px - minPx) / (defaultPx - minPx)) * 14;
+  } else {
+    return ((maxPx - px) / (maxPx - defaultPx)) * 14;
+  }
+}
+
+function updateView() {
+  body.style.perspectiveOrigin = `43% calc(${currentPercent}% - 3em)`;
+  body.style.transform = `rotateX(0deg) translate(10px, ${currentPx}px)`;
+}
+
+document.getElementById("lookUpBtn").addEventListener("click", () => {
+  currentPx = Math.max(minPx, currentPx - 20);
+  currentPercent = pxToPercent(currentPx);
+  updateView();
+});
+
+document.getElementById("lookDownBtn").addEventListener("click", () => {
+  currentPx = Math.min(maxPx, currentPx + 20);
+  currentPercent = pxToPercent(currentPx);
+  updateView();
+});
+
+updateView();
+
+var buttons = document.querySelectorAll(".television__channel a");
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function (event) {
+    document.querySelector(".television__screen iframe").src = this.href;
+    event.preventDefault();
+  });
+}
