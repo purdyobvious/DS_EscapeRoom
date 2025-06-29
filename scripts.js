@@ -134,11 +134,11 @@ document.addEventListener("keydown", (e) => {
 const body = document.body;
 
 // Set your desired min/max for each property
-const minPx = 400;
+const minPx = 200;
 const maxPx = 1400;
-const defaultPx = 900;
+const defaultPx = 400;
 let currentPx = defaultPx;
-let currentPercent = -10;
+let currentPercent = 7;
 
 function pxToPercent(px) {
   if (px <= defaultPx) {
