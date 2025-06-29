@@ -608,13 +608,13 @@ iframe {
 
 .letter {
   width: 3.75rem;
-  height: 6.25rem;
+  height: 10rem;
   background-color: #fff;
   padding: 0.5rem 0.25rem;
   color: #555;
   box-shadow: 0 0 0.025rem #aaa;
   font-family: "Dancing Script", cursive;
-  font-size: 0.375rem;
+  font-size: .25rem;
   text-indent: 0.125rem;
   transform-style: preserve-3d;
   transform-origin: bottom;
@@ -635,7 +635,7 @@ iframe {
   height: 15rem;
   border-radius: 50%;
   border-bottom: 0.5rem solid rgb(40, 44, 46); /* 2rem ÷ 4 */
-  transform: rotateX(89deg) translateZ(18rem);
+  transform: rotateX(89deg) translateZ(20rem);
   transform-style: preserve-3d;
   display: flex;
   justify-content: center;
