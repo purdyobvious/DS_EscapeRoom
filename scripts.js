@@ -79,14 +79,14 @@ toyBox.addEventListener("click", function () {
 });
 
 let movement = null;
-let movementTimer = null;
+// let movementTimer = null;
 const scene = document.querySelector(".scene");
 
 function startMovement(type) {
-  clearTimeout(movementTimer);
+  // clearTimeout(movementTimer);
   movement = type;
   scene.className = "scene " + type;
-  movementTimer = setTimeout(stopMovement, 5000);
+  // movementTimer = setTimeout(stopMovement, 5000);
 }
 
 function stopMovement() {
