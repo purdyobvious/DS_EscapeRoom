@@ -70,6 +70,16 @@ roseFrame.addEventListener("animationend", function () {
   this.classList.remove("clicked");
 });
 
+const toyBox = document.querySelector(".toy-box-left");
+
+toyBox.addEventListener("click", function () {
+  this.classList.toggle("clicked");
+});
+
+toyBox.addEventListener("animationend", function () {
+  this.classList.remove("clicked");
+});
+
 let movement = null;
 let movementTimer = null;
 const scene = document.querySelector(".scene");
