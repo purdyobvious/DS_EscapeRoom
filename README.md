@@ -83,3 +83,9 @@ Once all these numbers are found, you can click on the keypad on the back door. 
 # Tristan's Section
 
 # Lewis's Section
+Contributions:
+- Start screen, end screen CSS, minor JS, and HTML with hooks.
+- Created job board using monday.com for project management and follow ups. 
+- Created GITHUB repository and helped educated fellow teammates. 
+- Collaborated on ideas and held a compassionate and positive attitude. 
+
