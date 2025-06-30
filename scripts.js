@@ -1,9 +1,13 @@
+// ==========================
+// Initialization & Debug Mode
+// ==========================
 document.addEventListener("DOMContentLoaded", function () {
   const scene = document.querySelector(".scene");
   let debugMode = false;
 
   const instructions = document.querySelector(".instructions");
 
+  // Toggle instructions with "i" key
   document.addEventListener("keydown", function (event) {
     if (event.key.toLowerCase() === "i") {
       debugMode = !debugMode;
@@ -38,50 +42,70 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   document.head.appendChild(style);
 
+  // Debug logs
   console.log("3D Room Scene initialized successfully!");
   console.log("Controls: WASD or Arrow Keys, Spacebar/Escape to stop");
   console.log("Touch: Swipe to navigate on mobile devices");
   console.log('Press "i" to toggle instructions visibility');
 });
 
+// ==========================
+// Cube Animation (Toy Block)
+// ==========================
 const cubeContainer = document.querySelector(".cube-container");
 
-// Add click event listener
+// Spin cube on click
 cubeContainer.addEventListener("click", function () {
   this.classList.toggle("clicked");
 });
 
-// Remove the clicked class after animation completes
+// Remove spin class after animation
 cubeContainer.addEventListener("animationend", function () {
   this.classList.remove("clicked");
 });
 
+// ==========================
+// Letter Animation (Riddle)
+// ==========================
 document.querySelectorAll(".letter, .letter2").forEach((el) => {
   el.addEventListener("click", () => {
     document.body.classList.toggle("change");
   });
 });
 
+// ==========================
+// Rose Frame Animation
+// ==========================
 const roseFrame = document.querySelector(".rose-frame");
 
+// Rotate rose frame on click
 roseFrame.addEventListener("click", function () {
   this.classList.toggle("clicked");
 });
 
+// Remove rotate class after animation
 roseFrame.addEventListener("animationend", function () {
   this.classList.remove("clicked");
 });
 
+// ==========================
+// Toy Box Animation
+// ==========================
 const toyBox = document.querySelector(".toy-box-left");
 
+// Shrink toy box on click
 toyBox.addEventListener("click", function () {
   this.classList.toggle("clicked");
 });
 
+// ==========================
+// Scene Movement Controls
+// ==========================
 let movement = null;
 // let movementTimer = null;
 const scene = document.querySelector(".scene");
 
+// Start movement animation
 function startMovement(type) {
   // clearTimeout(movementTimer);
   movement = type;
@@ -89,11 +113,13 @@ function startMovement(type) {
   // movementTimer = setTimeout(stopMovement, 5000);
 }
 
+// Stop movement animation
 function stopMovement() {
   movement = null;
   scene.className = "scene stop";
 }
 
+// Button controls for movement
 document.querySelectorAll("[data-move]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const moveType = btn.getAttribute("data-move");
@@ -105,6 +131,9 @@ document.querySelectorAll("[data-move]").forEach((btn) => {
   });
 });
 
+// ==========================
+// Focus Handling
+// ==========================
 window.addEventListener("load", () => {
   window.focus();
 });
@@ -112,6 +141,9 @@ window.addEventListener("click", () => {
   window.focus();
 });
 
+// ==========================
+// Keyboard Controls
+// ==========================
 document.addEventListener("keydown", (e) => {
   if (e.key === "w" || e.key === "ArrowUp") startMovement("moveForward");
   if (e.key === "a" || e.key === "ArrowLeft") startMovement("turnLeft");
@@ -119,6 +151,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "d" || e.key === "ArrowRight") startMovement("turnRight");
   if (e.key === " " || e.key === "Escape") stopMovement();
 
+  // Perspective controls
   if (e.key === "PageUp") {
     currentPx = Math.max(minPx, currentPx - 20);
     currentPercent = pxToPercent(currentPx);
@@ -131,15 +164,19 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// ==========================
+// Perspective/View Controls
+// ==========================
 const body = document.body;
 
 // Set your desired min/max for each property
 const minPx = 200;
 const maxPx = 1400;
-const defaultPx = 400;
+const defaultPx = 700;
 let currentPx = defaultPx;
 let currentPercent = 7;
 
+// Convert px to percent for perspective origin
 function pxToPercent(px) {
   if (px <= defaultPx) {
     return ((px - minPx) / (defaultPx - minPx)) * 14;
@@ -148,11 +185,13 @@ function pxToPercent(px) {
   }
 }
 
+// Update the view/perspective
 function updateView() {
   body.style.perspectiveOrigin = `43% calc(${currentPercent}% - 3em)`;
   body.style.transform = `rotateX(0deg) translate(10px, ${currentPx}px)`;
 }
 
+// Look up/down buttons
 document.getElementById("lookUpBtn").addEventListener("click", () => {
   currentPx = Math.max(minPx, currentPx - 20);
   currentPercent = pxToPercent(currentPx);
@@ -167,6 +206,9 @@ document.getElementById("lookDownBtn").addEventListener("click", () => {
 
 updateView();
 
+// ==========================
+// Television Channel Controls
+// ==========================
 var buttons = document.querySelectorAll(".television__channel a");
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", function (event) {
