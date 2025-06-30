@@ -82,13 +82,15 @@ Once all these numbers are found, you can click on the keypad on the back door. 
 
 # Tristan's Section
 
+Working on this project really pushed me to learn DOM manipulation and JavaScript fundamentals. While I’m still building my understanding of the basics, I was able to get things working through lots of Googling, MDN docs, YouTube tutorials, trial and error, and some helpful ChatGPT explanations when I got stuck.
+
 ## Maze Mini-Game
 
 I created the interactive maze mini-game featured on the left wall of the escape room. The goal is to guide the "seeker small" (the rat) through the maze to reach its "sweet temptation" (the cheese). Completing the maze reveals one of the six numbers needed to escape.
 
 ### Technical Details
 
-- The maze is a standalone project _(built specificly for hackathon)_, built with JavaScript, HTML, and CSS, and is embedded in the escape room via an iframe.
+- The maze is a standalone project (built specifically for the hackathon) using JavaScript, HTML, and CSS, and is embedded in the escape room via an iframe.
 - The maze logic includes keyboard controls for movement and collision detection for walls and the goal.
 - For the hackathon, I temporarily included a "cheat" button for testing, which will be removed in the final version.
 
@@ -101,36 +103,59 @@ I enjoyed building the maze so much that I decided to host it as a separate proj
 
 ### Inspiration
 
-The maze was inspired by classic puzzle games and my love for interactive challenges within games and by a video Amber sent me.
+The maze was inspired by classic puzzle games, my love for interactive challenges, and a video Amber sent me.
 
 ### Credits
 
-- Huge shout out to Alexis Jimenez _(azen04)_. I could not have done this without his exstinsive help and advanced js knowledge. He spent almost Four hours trying to helping me with this.
-- Shout out to Shawn Brown _(wizdomplayz)_ took 30 seconds to help fix a issue I spent 3 hours stuck on...
+- Huge shout out to Alexis Jimenez (_azen04_) for his extensive help and advanced JS knowledge—he spent almost four hours helping me debug!
+- Thanks to Shawn Brown (_wizdomplayz_) who fixed an issue in 30 seconds that I’d been stuck on for three hours.
+
+---
 
 ## TV
 
-I developed the interactive TV puzzle located on the right wall of the escape room. Players can use the channel buttons to switch between different "channels" (embedded videos and images). The correct channel reveals one of the six numbers needed to escape.
+I developed the interactive TV puzzle on the right wall of the escape room. Players use the channel buttons to switch between different "channels" (embedded videos and images). The correct channel reveals one of the six numbers needed to escape.
 
 ### Technical Details
 
 - The TV is built using HTML, CSS, and JavaScript.
-- Channel buttons are implemented as clickable elements that change the `iframe` source to display different content.
+- Channel buttons are clickable elements that change the `iframe` source to display different content.
 - Only one specific channel displays the hidden number required for the final code.
 
 ### Inspiration
 
 This puzzle was inspired by classic point-and-click adventure games where players must "tune" devices to the right setting to reveal clues.
 
-### Notes
+### Notes / Problems
 
-On some computers there is a issue with the tv's funtionalitly. Inparticular the issue is generaly with the channel buttons and the scroll elements of the screen. As far as we can determine this is related to lack of system resources on the users end. It works for everyone except occasionaly. This is all we can figure is the issue. Any feedback you have for us on this is quite welcome. To the best of our abbility to determine it will be functional however.
+- On some computers, there are issues with the TV’s functionality—mainly with the channel buttons and scroll elements. We think this is related to low system resources, but it’s rare and hard to reproduce. Any feedback is welcome!
+- Sometimes, after activating the popup for the door code, the TV controls stop working. If this happens, close the popup and reload the browser window. We haven’t found a solution yet.
 
 ---
 
 ## Controls
 
 I implemented the navigation controls for the escape room, allowing players to move and look around the 3D environment using both keyboard and on-screen buttons.
+
+### How They Work
+
+- **Keyboard Controls:**  
+  The script listens for `keydown` events. When a movement key (W/A/S/D or Arrow keys) is pressed, it calls `startMovement(type)`, updating the `.scene` element’s class to trigger CSS animations for movement or turning. Pressing Space or Escape calls `stopMovement()`, resetting the scene to a neutral state.
+
+- **On-Screen Buttons:**  
+  Each movement button in the `#controls` div has a `data-move` attribute. Clicking a button calls either `startMovement(type)` or `stopMovement()`, providing the same effect as the keyboard controls.
+
+- **Perspective/View Controls:**  
+  The "Look Up" and "Look Down" buttons, as well as the PageUp/PageDown keys, adjust the camera’s vertical position by changing the `perspectiveOrigin` and `transform` CSS properties on the `<body>`, using the `updateView()` function.
+
+- **Focus Handling:**  
+  The script ensures the window stays focused for keyboard input by refocusing on load and on click.
+
+- **Active Feedback:**  
+  When a control is active, a dynamic CSS style is injected to visually highlight the active button.
+
+**In summary:**  
+The JavaScript acts as a bridge between user input (keyboard or mouse) and the visual state of the 3D room, updating classes and styles to animate movement, adjust perspective, and provide feedback, all while keeping the controls accessible.
 
 ### Technical Details
 
@@ -146,5 +171,10 @@ The controls are designed to mimic classic 3D adventure games, making the experi
 ### Inspiration
 
 Inspired by classic PC adventure games and modern browser-based 3D experiences, with a focus on accessibility and ease of use.
+
+### Notes / Problems
+
+- We had difficulty with the view being weird for different screen sizes and the way it loaded, so I implemented the look up and down feature. If the perspective is off and you can’t see the on-screen controls, use the PgUp and PgDn keys to adjust the view.
+- Some laptops have issues with the controls glitching, likely due to low system resources. With limited JS knowledge and time, we couldn’t fully troubleshoot this.
 
 # Lewis's Section
