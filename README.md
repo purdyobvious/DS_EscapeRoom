@@ -62,6 +62,28 @@ Just open `index.html` in your web browser.
 Enjoy unraveling the secrets of Lord
 
 # Amber's Section
+What I Built
+I created the initial scene that included the ceiling, floors, and walls using mainly HTML/CSS, which generated a lot of interesting facets of learning. 
+
+I made the table and learned a lot about rendering another element from an outside document (the scene I originally made the table in was a different scale than the one I created the 3d room in). Scale and size changes were a must in this along with the various positioning elements that I mention as far as research. 
+
+I learned how to add a clicked change class to an element and made it work with the help of Alexis because I wasn't sure what broke during a merge, but the JavaScript flows perfectly. This was applied to letter, letter2, the block, and toybox elements.
+
+I created the rolling block. This was a challenge that later helped me make the toybox to place the block into. I never realized how difficult it might be to create a 3d element in a 2d based site, but it seems my team and I rose to those occasions quite well. We left it roll to its position to appear as if a toddler was throwing a block since 3/4 of our teammates have children. 
+
+The sidewalk was painstakingly created and moved into place, too. I never realized the various challenges that a 3d room would create with design and adding elements. Adding any element to the scene shifts the items all over, leading to minute and tedious adjustments that sometimes were a hoot to overcome! 
+
+The trees were fun to create, with learning a repeat to make several trees line the sidewalk. They had to each be moved into position and shifted around as needed. This was exiting to see things come to life as the progress unfolded. At one point, we had actually talked about removing the trees and the sidewalk, but we kept them anyways. 
+
+The welcome mat was fun and interesting, breaking the outside view all the more, making the humerous laughs and snorts that emanated from us make it all the more enjoyable, while we sometimes struggled to piece this together due to our limited JavaScript experience.
+
+Through this, I spent hours learning about how to properly transform elements using RotateX(), rotateY(), rotateZ(), translateX(), translateY(), translateZ(), top, left, absolute, and relative positioning. Styling elements was interesting in a 3d space. The toybox was designed to the wishes of my daughter with the vibrant pink and dark black with the blue text shadow. She requested that the rose be added into the scene, too. 
+
+I am profoundly humbled by my teams great work ethic, their drive to enjoy this along with me, and the great work that each of them have contributed to our experience. Tristan is the github repo king, helping us all make sure that we didn't have to revert like Eric had to help me do after I forgot to switch back to a branch before making changes. His maze is one for the masses to struggle getting to the end of! His TV is interesting, too.  Gillian's artistry is impressive, and Lewis's creations for the start and end scenes all added to a scene that not only includes all of our tastes, but allows us to add our nerdy sides. 
+
+At this point, I am looking forward to the feedback more than battling or first place, though it would be awesome to hear that we placed somewhere in the running, too. I've had so much fun creating and demonstrating what we were capable of, watching others rise to meet my crazy scene and excelling, too! 
+
+
 
 # Gillian's Section
 
