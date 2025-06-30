@@ -84,12 +84,12 @@ The front door rotates open on hover, and the backdoor had a keypad that once cl
 
 Answers to riddle:
 
-Stanza 1. Refers to the block inside the toybox.
-Stanza 2. Refers to the plant
-Stanza 3. Refers to the tv
-Stanza 4. Refers to the picture of the rose.
-Stanza 5. Refers to the maze
-Stanza 6. Refers to the bookshelf.
+Clue 1. Refers to the block inside the toybox.
+Clue 2. Refers to the plant
+Clue 3. Refers to the tv
+Clue 4. Refers to the picture of the rose.
+Clue 5. Refers to the maze
+Clue 6. Refers to the bookshelf.
 
 The final answer is 351824
 
