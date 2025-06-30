@@ -519,6 +519,7 @@ iframe {
 
 .toy-box-left p {
   font-size: 30px;
+  text-shadow: 2px 2px 2px #2779a9;
 }
 
 .toy-box-left.clicked {
@@ -529,6 +530,7 @@ iframe {
 
 .toy-box-left.clicked p {
   font-size: 15px;
+  text-shadow: 1px 1px 0px #2779a9;
 }
 
 .toy-box-top {
@@ -610,6 +612,11 @@ iframe {
 .bottom {
   transform: rotateX(-90deg) translateZ(1.0625rem);
   background-color: #b89900;
+}
+
+.cube-face p {
+    color: #c90909;
+    font-size: 20px;
 }
 
 /* Animation on click */
