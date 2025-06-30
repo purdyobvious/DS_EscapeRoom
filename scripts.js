@@ -170,11 +170,11 @@ document.addEventListener("keydown", (e) => {
 const body = document.body;
 
 // Set your desired min/max for each property
-const minPx = 200;
+const minPx = 400;
 const maxPx = 1400;
-const defaultPx = 400;
+const defaultPx = 900;
 let currentPx = defaultPx;
-let currentPercent = 7;
+let currentPercent = -10;
 
 // Convert px to percent for perspective origin
 function pxToPercent(px) {
