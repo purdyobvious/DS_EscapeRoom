@@ -82,4 +82,11 @@ Once all these numbers are found, you can click on the keypad on the back door. 
 
 # Tristan's Section
 
+## Maze
+
+I built the maze specificly for this but due to the complexity of it and the fact that I was really enjoying it as a standalone maze I decided to host it on on github pages and then just stuck a Iframe in the wall and targeted it. I also used a script I had created for testing to create a cheat button for you Tyler, I am going to remove that feature as soon as the hackathon is over.
+
+- [here is the link to the live page](https://tristanedu.github.io/Maze/)
+- [here is the link to the actual repo](https://github.com/TristanEDU/Maze)
+
 # Lewis's Section
