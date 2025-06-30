@@ -49,3 +49,15 @@ body {
   transform: scale(1.05);
   background: #a32020;
 }
+
+.instructions {
+  font-size: 1.1em;
+  color: #5a4532;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  border: 2px solid #8b5e3c;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fdf6e3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
