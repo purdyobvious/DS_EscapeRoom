@@ -20,7 +20,7 @@ You are the heir to Lord Harrington’s mysterious estate. To claim your inherit
      - **A / ←**: Turn Left
      - **S / ↓**: Move Back
      - **D / →**: Turn Right
-     - **X / ●**: Stop
+     - **Space / ●**: Stop
      - **PageUp / PageDown**: Look Up/Down
    - You can also use your mouse to interact with objects in the room.
 
