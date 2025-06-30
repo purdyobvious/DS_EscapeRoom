@@ -1125,7 +1125,7 @@ iframe {
 @keyframes move-out {
   50% {
     /* transform: translateY(-300px) translateX(-300px); */
-    transform: translateX(-340px) translateZ(-390px) translateY(-270px)
+    transform: translateX(-340px) translateZ(-390px) translateY(-300px)
       rotateY(-90deg);
   }
 }
