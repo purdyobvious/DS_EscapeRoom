@@ -82,11 +82,69 @@ Once all these numbers are found, you can click on the keypad on the back door. 
 
 # Tristan's Section
 
-## Maze
+## Maze Mini-Game
 
-I built the maze specificly for this but due to the complexity of it and the fact that I was really enjoying it as a standalone maze I decided to host it on on github pages and then just stuck a Iframe in the wall and targeted it. I also used a script I had created for testing to create a cheat button for you Tyler, I am going to remove that feature as soon as the hackathon is over.
+I created the interactive maze mini-game featured on the left wall of the escape room. The goal is to guide the "seeker small" (the rat) through the maze to reach its "sweet temptation" (the cheese). Completing the maze reveals one of the six numbers needed to escape.
 
-- [here is the link to the live page](https://tristanedu.github.io/Maze/)
-- [here is the link to the actual repo](https://github.com/TristanEDU/Maze)
+### Technical Details
+
+- The maze is a standalone project _(built specificly for hackathon)_, built with JavaScript, HTML, and CSS, and is embedded in the escape room via an iframe.
+- The maze logic includes keyboard controls for movement and collision detection for walls and the goal.
+- For the hackathon, I temporarily included a "cheat" button for testing, which will be removed in the final version.
+
+### Fun Fact
+
+I enjoyed building the maze so much that I decided to host it as a separate project! You can try it out or view the source code here:
+
+- [Live Maze Game](https://tristanedu.github.io/Maze/)
+- [Maze Source Code](https://github.com/TristanEDU/Maze)
+
+### Inspiration
+
+The maze was inspired by classic puzzle games and my love for interactive challenges within games and by a video Amber sent me.
+
+### Credits
+
+- Huge shout out to Alexis Jimenez _(azen04)_. I could not have done this without his exstinsive help and advanced js knowledge. He spent almost Four hours trying to helping me with this.
+- Shout out to Shawn Brown _(wizdomplayz)_ took 30 seconds to help fix a issue I spent 3 hours stuck on...
+
+## TV
+
+I developed the interactive TV puzzle located on the right wall of the escape room. Players can use the channel buttons to switch between different "channels" (embedded videos and images). The correct channel reveals one of the six numbers needed to escape.
+
+### Technical Details
+
+- The TV is built using HTML, CSS, and JavaScript.
+- Channel buttons are implemented as clickable elements that change the `iframe` source to display different content.
+- Only one specific channel displays the hidden number required for the final code.
+
+### Inspiration
+
+This puzzle was inspired by classic point-and-click adventure games where players must "tune" devices to the right setting to reveal clues.
+
+### Notes
+
+On some computers there is a issue with the tv's funtionalitly. Inparticular the issue is generaly with the channel buttons and the scroll elements of the screen. As far as we can determine this is related to lack of system resources on the users end. It works for everyone except occasionaly. This is all we can figure is the issue. Any feedback you have for us on this is quite welcome. To the best of our abbility to determine it will be functional however.
+
+---
+
+## Controls
+
+I implemented the navigation controls for the escape room, allowing players to move and look around the 3D environment using both keyboard and on-screen buttons.
+
+### Technical Details
+
+- Supports keyboard navigation: **WASD** or **Arrow Keys** for movement, **X** or **●** to stop, and **PageUp/PageDown** to look up or down.
+- On-screen buttons provide accessible controls for users on any device.
+- JavaScript handles movement animations and updates the scene based on user input.
+- Instructions can be toggled with the "i" key for quick reference.
+
+### Fun Fact
+
+The controls are designed to mimic classic 3D adventure games, making the experience intuitive for both gamers and newcomers.
+
+### Inspiration
+
+Inspired by classic PC adventure games and modern browser-based 3D experiences, with a focus on accessibility and ease of use.
 
 # Lewis's Section
