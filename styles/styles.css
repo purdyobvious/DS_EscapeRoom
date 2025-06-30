@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Imperial+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
 
 :root {
   --turnSpeed: 40s;
@@ -30,6 +31,11 @@
 }
 
 body {
+  background-image: url("https://img.freepik.com/free-vector/night-time-sky-background-with-glittering-stars_1048-19664.jpg?semt=ais_hybrid&w=740");
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-size: 100rem;
   background-color: #000;
   min-height: 100vh;
   display: flex;
@@ -525,7 +531,7 @@ iframe {
 .toy-box-left.clicked {
   width: 50px;
   transform: rotateY(-90deg) translateX(253px) translateY(-19px)
-    translateZ(74px);
+    translateZ(55px);
 }
 
 .toy-box-left.clicked p {
@@ -640,11 +646,11 @@ iframe {
 .letter2 {
   width: 3.75rem;
   height: 10rem;
-  background-color: #fff;
+  background-color: #bcb88b;
   padding: 0.5rem 0.25rem;
-  color: #555;
+  color: #000000;
   box-shadow: 0 0 0.025rem #aaa;
-  font-family: "Dancing Script", cursive;
+  font-family: "Libertinus Mono", cursive;
   font-size: 0.25rem;
   text-indent: 0.125rem;
   transform-style: preserve-3d;
@@ -652,6 +658,20 @@ iframe {
   transition: transform 1s;
   cursor: pointer;
   line-height: 1.2;
+}
+
+.letter {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 10px;
+}
+
+.letter2 {
+  border-top-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
 }
 
 .change .letter,
@@ -967,7 +987,7 @@ iframe {
   background-color: grey;
   transform-style: preserve-3d;
   transform: translate(-48%, -133%) rotateX(90deg) translateY(40rem)
-    translateZ(2.8em);
+    translateZ(2.5em);
 }
 
 .welcomeMat {
@@ -975,8 +995,10 @@ iframe {
   height: 8rem;
   transform-style: preserve-3d;
   transform: translate(-48%, -133%) rotateX(90deg) translateY(30rem)
-    translateZ(7em);
+    translateZ(6.8em);
   background-color: rgb(131 88 23);
+  box-shadow: 5px 5px 5px 5px #3b3733;
+  border-radius: 10px;
 }
 
 .welcomeMat p {
@@ -984,7 +1006,9 @@ iframe {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 28px;
   color: #000;
+  text-shadow: 1px 1px 1px #e6cc9f;
 }
 
 .treeContainer {
@@ -1002,6 +1026,7 @@ iframe {
   width: 0.5em;
   height: 4em;
   background-color: #4c2f0a;
+  border: 1px solid #3c2105;
   border-radius: 0.1em;
   transform-origin: bottom center;
   bottom: 0;
@@ -1012,6 +1037,7 @@ iframe {
   width: 3em;
   height: 3em;
   background-color: #2d5a2d;
+  border: 1px solid #183118;
   border-radius: 50%;
   bottom: 3em;
   left: -1.25em;
@@ -1024,6 +1050,7 @@ iframe {
   width: 2em;
   height: 2em;
   background-color: #3d7a3d;
+  border: 1px solid #1e431e;
   border-radius: 50%;
   top: -0.8em;
   left: 0.5em;
@@ -1035,6 +1062,7 @@ iframe {
   width: 1.5em;
   height: 1.5em;
   background-color: #4d8a4d;
+  border: 1px solid #224c22;
   border-radius: 50%;
   top: -0.3em;
   right: 0.2em;
