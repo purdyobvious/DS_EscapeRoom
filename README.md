@@ -65,27 +65,48 @@ Enjoy unraveling the secrets of Lord
 
 # Gillian's Section
 
-!!!!!!!!SPOILER ALERT!!!!!!!!!!!
+What I Built
+I built the bookshelf, the rose picture, the plant, and the doors. I also wrote the riddle.
+
+Technical Details
+
+!!!!!!!!!!!SPOILER ALERT!!!!!!!!!!!!!!
 
 !!! DO NOT READ UNLESS YOU GIVE UP!!!
 
+The books on the bookshelf pull out on hover. One of the covers has a four on it.
+
+The rose picture rotates when clicked, revealing the number eight on the wall behind it.
+
+The plant has a hover function on its pot. The number five is hidden inside.
+
+The front door rotates open on hover, and the backdoor had a keypad that once clicked reveals a popup that allows you to input the secret code.
+
 Answers to riddle:
 
-1. "Stone" or "cube" is the block inside the toy-box. If you click on this block, it will spin, revealing the number three.
-2. The "potted thing" is the plant. If you hover over the plant's pot, the face will move revealing the number five.
-3. The "vision" or "window" is the tv. If you navigate to the right channel on the tv, you will find the number one.
-4. The "colors trapped" refers to the picture of the rose. If you click on this picture, it will rotate out, revealing the number eight on the wall behind it.
-5. The "navigation" refers to the maze. You must take the "seeker small" (the rat) to the end of it where it will find its "sweet temptation" (the cheese). Once that is done, the number two will be revealed.
-6. The "world bound in ink" and the "paper dreams" refer to the books on the bookshelf. If you hover over these books, you will find that one of them has the number four on the cover.
+Stanza 1. Refers to the block inside the toybox.
+Stanza 2. Refers to the plant
+Stanza 3. Refers to the tv
+Stanza 4. Refers to the picture of the rose.
+Stanza 5. Refers to the maze
+Stanza 6. Refers to the bookshelf.
+
+The final answer is 351824
 
 Once all these numbers are found, you can click on the keypad on the back door. Then you can enter the number into the input bar, and that will take you to the final screen.
+
+Fun Fact
+The books are all of our favorites!
+
+All the Javascript I used in this project, I learned specifically for this project. I did not know any of it beforehand.
 
 # Tristan's Section
 
 # Lewis's Section
-Contributions:
-- Start screen, end screen CSS, minor JS, and HTML with hooks.
-- Created job board using monday.com for project management and follow ups. 
-- Created GITHUB repository and helped educated fellow teammates. 
-- Collaborated on ideas and held a compassionate and positive attitude. 
 
+Contributions:
+
+- Start screen, end screen CSS, minor JS, and HTML with hooks.
+- Created job board using monday.com for project management and follow ups.
+- Created GITHUB repository and helped educated fellow teammates.
+- Collaborated on ideas and held a compassionate and positive attitude.
